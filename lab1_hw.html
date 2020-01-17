@@ -196,9 +196,14 @@ summary {
 </li>
 <li>8 / 2 ** 2 = 2</li>
 </ul>
+<pre class="r"><code>5-3*2</code></pre>
+<pre><code>## [1] -1</code></pre>
+<pre class="r"><code>8/2**2</code></pre>
+<pre><code>## [1] 2</code></pre>
 <ol start="2" style="list-style-type: decimal">
 <li>Did any of the results in #1 surprise you? Write two programs that calculate each expression such that the result for the first example is 4 and the second example is 16.</li>
 </ol>
+<p>I was not suprised simply because it follows the orders of operation that a calculator would follow.</p>
 <pre class="r"><code>x &lt;- (5-3)*2
 y &lt;- (8/2)^2</code></pre>
 <ol start="3" style="list-style-type: decimal">
@@ -226,29 +231,30 @@ names(roulette) &lt;- days</code></pre>
 <ol start="2" style="list-style-type: lower-alpha">
 <li>Calculate how much you won or lost in blackjack over the week.</li>
 </ol>
-<pre class="r"><code>sum(blackjack)</code></pre>
+<pre class="r"><code>blackjack_earnings &lt;- sum(blackjack)
+print(blackjack_earnings)</code></pre>
 <ol start="3" style="list-style-type: lower-alpha">
 <li>What is your interpretation of this result? What do you need to do to address the problem? Recalculate how much you won or lost in blackjack over the week.</li>
 </ol>
 <p>My results were inconclusive because I had the weekend, which I do not gamble giving me NA. Therefore I need to omit saturday and sunday. I won $310.</p>
-<pre class="r"><code>blackjack1 &lt;- na.omit(blackjack)
-sum(blackjack1)</code></pre>
+<pre class="r"><code>blackjack_earnings &lt;- na.omit(blackjack)
+sum(blackjack_earnings)</code></pre>
 <ol start="4" style="list-style-type: lower-alpha">
 <li>Calculate how much you won or lost in roulette over the week.</li>
 </ol>
 <p>I lost $60</p>
-<pre class="r"><code>roulette1 &lt;- na.omit(roulette)
-sum(roulette1)</code></pre>
+<pre class="r"><code>roulette_earnings &lt;- na.omit(roulette)
+sum(roulette_earnings)</code></pre>
 <ol start="5" style="list-style-type: lower-alpha">
 <li>Build a <code>total_week</code> vector to show how much you lost or won on each day over the week. Which days seem lucky or unlucky for you?</li>
 </ol>
 <p>Thursday seems to be unlucky, and every other day seems to be lucky.</p>
-<pre class="r"><code>total_week &lt;- c(blackjack1+roulette1)</code></pre>
+<pre class="r"><code>total_week &lt;- c(blackjack_earnings+roulette_earnings)</code></pre>
 <ol start="6" style="list-style-type: lower-alpha">
 <li>Should you stick to blackjack or roulette? Write a program that verifies this below.</li>
 </ol>
 <p>I should stick to blackjack.</p>
-<pre class="r"><code>sum(blackjack1) &gt; sum(roulette1)</code></pre>
+<pre class="r"><code>sum(blackjack_earnings) &gt; sum(roulette_earnings)</code></pre>
 </div>
 <div id="push-your-final-code-to-github" class="section level2">
 <h2>Push your final code to GitHub</h2>

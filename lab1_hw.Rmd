@@ -25,6 +25,7 @@ I was not suprised simply because it follows the orders of operation that a calc
 ```{r}
 x <- (5-3)*2
 y <- (8/2)^2
+
 ```
 
 3. Make a new object `pi` as 3.14159265359.  
@@ -91,4 +92,4 @@ I should stick to blackjack.
 sum(blackjack_earnings) > sum(roulette_earnings)
 ```
 
-## Push your final code to GitHub
+## Push your final code to [GitHub](https://github.com/FRS417-DataScienceBiologists)

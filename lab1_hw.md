@@ -14,8 +14,26 @@ Answer the following questions and complete the exercises in RMarkdown. Please e
 1. Navigate to the R console and calculate the following expressions.  
   + 5 - 3 * 2 = -1  
   + 8 / 2 ** 2 = 2 
+
+```r
+5-3*2
+```
+
+```
+## [1] -1
+```
+
+```r
+8/2**2
+```
+
+```
+## [1] 2
+```
   
 2. Did any of the results in #1 surprise you? Write two programs that calculate each expression such that the result for the first example is 4 and the second example is 16.  
+
+I was not suprised simply because it follows the orders of operation that a calculator would follow.
 
 ```r
 x <- (5-3)*2
@@ -61,7 +79,8 @@ names(roulette) <- days
 b. Calculate how much you won or lost in blackjack over the week.  
 
 ```r
-sum(blackjack)
+blackjack_earnings <- sum(blackjack)
+print(blackjack_earnings)
 ```
 
 c. What is your interpretation of this result? What do you need to do to address the problem? Recalculate how much you won or lost in blackjack over the week.  
@@ -69,8 +88,8 @@ c. What is your interpretation of this result? What do you need to do to address
 My results were inconclusive because I had the weekend, which I do not gamble giving me NA. Therefore I need to omit saturday and sunday. I won $310.
 
 ```r
-blackjack1 <- na.omit(blackjack)
-sum(blackjack1)
+blackjack_earnings <- na.omit(blackjack)
+sum(blackjack_earnings)
 ```
 
 d. Calculate how much you won or lost in roulette over the week.  
@@ -78,8 +97,8 @@ d. Calculate how much you won or lost in roulette over the week.
 I lost $60
 
 ```r
-roulette1 <- na.omit(roulette)
-sum(roulette1)
+roulette_earnings <- na.omit(roulette)
+sum(roulette_earnings)
 ```
 
 e. Build a `total_week` vector to show how much you lost or won on each day over the week. Which days seem lucky or unlucky for you?
@@ -87,7 +106,7 @@ e. Build a `total_week` vector to show how much you lost or won on each day over
 Thursday seems to be unlucky, and every other day seems to be lucky.
 
 ```r
-total_week <- c(blackjack1+roulette1)
+total_week <- c(blackjack_earnings+roulette_earnings)
 ```
 
 
@@ -96,7 +115,7 @@ f. Should you stick to blackjack or roulette? Write a program that verifies this
 I should stick to blackjack.
 
 ```r
-sum(blackjack1) > sum(roulette1)
+sum(blackjack_earnings) > sum(roulette_earnings)
 ```
 
 ## Push your final code to GitHub
