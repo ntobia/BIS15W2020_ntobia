@@ -80,7 +80,7 @@ b. Calculate how much you won or lost in blackjack over the week.
 
 ```r
 blackjack_earnings <- sum(blackjack)
-print(blackjack_earnings)
+blackjack_earnings
 ```
 
 c. What is your interpretation of this result? What do you need to do to address the problem? Recalculate how much you won or lost in blackjack over the week.  
@@ -118,4 +118,4 @@ I should stick to blackjack.
 sum(blackjack_earnings) > sum(roulette_earnings)
 ```
 
-## Push your final code to GitHub
+## Push your final code to [GitHub](https://github.com/FRS417-DataScienceBiologists)
