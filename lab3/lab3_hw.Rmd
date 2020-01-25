@@ -28,16 +28,76 @@ Reference: Tamburello N, Cote IM, Dulvy NK (2015) Energy and the scaling of anim
 Data: http://datadryad.org/resource/doi:10.5061/dryad.q5j65/1  
 
 1. Load the data into a new object called `homerange`.  
+```{r}
+homerange <- readr::read_csv("data/Tamburelloetal_HomeRangeDatabase.csv")
+```
 
 2. Use `spec()` to see the full details of the columns.  
+```{r}
+spec(homerange)
+```
 
-3. Explore the data. Show the dimensions, column names, classes for each variable, and a statistical summary. Keep these as separate code chunks.  
+
+3. Explore the data. Show the dimensions, column names, classes for each variable, and a statistical summary. Keep these as separate code chunks.
+
+Dimensions:
+```{r}
+dim(homerange)
+```
+
+Column names:
+```{r}
+names(homerange)
+```
+
+
+Classes:
+```{r}
+
+```
+
+
+Summary:
+```{r}
+summary(homerange)
+```
+
+
 
 4. Are there NA's in your data? Show the code that you would use to verify this, please.  
+There are NA's
+
+```{r}
+anyNA(homerange)
+```
+
 
 5. Change the class of the variables `taxon` and `order` to factors and display their levels.  
+```{r}
+homerange$taxon <- as.factor(homerange$taxon)
+class(homerange$taxon)
+```
+
+```{r}
+homerange$order <- as.factor(homerange$order)
+class(homerange$order)
+```
+
+```{r}
+levels(homerange$order)
+```
+
+```{r}
+levels(homerange$taxon)
+```
 
 6. Make a new dataframe `deer` that is limited to the mean mass, log10 mass, family, genus, and species of deer in the database. The family for deer is cervidae. Arrange the data in descending order by log10 mass. Which is the largest deer?  
+```{r}
+deer <- select(homerange, mean.mass.g, log10.mass, family, genus, species)
+filter(deer, family == deer)
+arrange(desc(deer))
+```
+
 
 7. As measured by the data, which snake species has the smallest homerange? Show all of your work, please. Look this species up online and tell me about it!  
 
