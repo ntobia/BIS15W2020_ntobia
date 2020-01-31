@@ -49,8 +49,21 @@ expenditures
 
 ## Practice
 1. Are these data tidy? Please use `pivot_longer()` to tidy the data. Here we use back ticks on the column names so R does not confuse them with numerical indices.
+```{r}
+expenditures %>% 
+  pivot_longer(-expenditure,
+               names_to = "year",
+               values_to = "Dollars")
+```
 
 2. Restrict the data to medical and health expenditures only. Sort in ascending order.
+```{r}
+expenditures %>% 
+  filter(expenditures == "medical and health") %>% 
+  arrange(expenditures)
+
+```
+
 
 ## `pivot_wider()`
 The opposite of `pivot_longer()`. You use `pivot_wider()` when you have an observation scattered across multiple rows. In the example below, `cases` and `population` represent variable names not observations.  
@@ -74,6 +87,25 @@ tb_data %>%
 
 ## Practice
 1. Load the `gene_exp.csv` data as a new object `gene_exp`. Are these data tidy? Use `pivot_wider()` to tidy the data.
+```{r}
+gene_exp <- readr::read_csv("data/gene_exp.csv")
+gene_exp
+```
+
+```{r}
+gene2 <- 
+  gene_exp %>% 
+  pivot_wider(names_from = "type",
+              values_from = "L4_values")
+```
+
+```{r}
+gene2 %>% 
+  pivot_longer(-gene_id,
+               names_to = "type",
+               values_to = "L4_values"
+               )
+```
 
 ## `rename()`
 The `rename()` function is actually part of *dplyr*, but I put it here because I think of it as part of transforming untidy data. Remember, youcan still rename columns as part of `select()`.
@@ -87,6 +119,11 @@ tb_data %>%
     New_Cases=cases,
     Population=population
   )
+
+tb_data %>% 
+  pivot_wider(names_from = "key",
+              values_from = "values") %>% 
+  select(country)
 ```
 
 ## `summarize()`
@@ -136,15 +173,35 @@ msleep %>%
 There are many other useful summary statistics, depending on your needs: sd(), min(), max(), median(), sum(), n() (returns the length of vector), first() (returns first value in vector), last() (returns last value in vector) and n_distinct() (number of distinct values in vector).
 
 ## Practice
-1. How many genera are represented in the msleep data frame?
+1. How many orders are represented in the msleep data frame?
+```{r}
+msleep %>% 
+  summarise(n_order=n_distinct(order))
+```
+
 
 2. What are the min, max, and mean body weight for all of the mammals? Be sure to include the total n.
+```{r}
+msleep %>% 
+  summarize(mean_bodywt_lg = mean(bodywt), 
+              min_sleep_lg = min(bodywt),
+              max_sleep_lg = max(bodywt),
+              total = n())
+  
+```
+
 
 ## `group_by()`
 The `summarize()` function is most useful when used in conjunction with `group_by()`. Although producing a summary of body weight for all of the mammals in the dataset is helpful, what if we were interested in body weight by feeding ecology?
 ```{r}
 names(msleep)
 ```
+
+```{r}
+msleep$genus
+```
+
+
 
 ```{r}
 msleep %>%
@@ -177,10 +234,30 @@ msleep %>%
 
 ## Practice
 1. Calculate mean brain weight by taxonomic order in the msleep data.
+```{r}
+msleep %>%
+  group_by(order) %>% 
+  summarise(Mean_brainwt = mean(brainwt))
+  
+```
+
+```{r}
+msleep %>% 
+  filter(order=="Artiodactyla")
+```
 
 2. What does `NA` mean?
 
+
 3. Try running the code again, but this time add `na.rm=TRUE`. What is the problem with Cetacea?
+
+```{r}
+msleep %>%
+  group_by(order) %>% 
+  summarise(Mean_brainwt = mean(brainwt, na.rm=TRUE))
+
+  
+```
 
 ## That's it, let's take a break!   
 
