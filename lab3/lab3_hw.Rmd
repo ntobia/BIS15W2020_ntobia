@@ -3,9 +3,9 @@ title: "Lab 3 Homework"
 author: "Please Add Your Name Here"
 date: "Winter 2020"
 output:
-  html_document:
+  html_document: 
+    keep_md: yes
     theme: spacelab
-    toc: no
 ---
 
 ```{r setup, include=FALSE}
@@ -53,7 +53,7 @@ names(homerange)
 
 Classes:
 ```{r}
-
+lapply(homerange, class)
 ```
 
 
@@ -93,27 +93,77 @@ levels(homerange$taxon)
 
 6. Make a new dataframe `deer` that is limited to the mean mass, log10 mass, family, genus, and species of deer in the database. The family for deer is cervidae. Arrange the data in descending order by log10 mass. Which is the largest deer?  
 ```{r}
-deer <- select(homerange, mean.mass.g, log10.mass, family, genus, species)
-filter(deer, family == deer)
-arrange(desc(deer))
+deer <- homerange %>% 
+  select(family, genus, species, mean.mass.g, log10.mass) %>%
+  filter(family == "cervidae") %>%
+  arrange(desc(log10.mass))
+
+deer
 ```
+
+The largest deer is the species Alces from the genus alces.
 
 
 7. As measured by the data, which snake species has the smallest homerange? Show all of your work, please. Look this species up online and tell me about it!  
+```{r}
+snake <- homerange %>% 
+  select(taxon, family, species, common.name, mean.hra.m2) %>% 
+  filter(taxon=="snakes") %>% 
+  arrange(mean.hra.m2)
+snake
 
+```
+
+Namaqua dwarf adder has the smallest homerange. This is the smallest adder in the world, averaging around 20 cm. Females produce 3 – 7 young, each measuring 11 – 13 cm in length. It occurs in coastal dunes in Namaqualand and southern Namibia where it feeds on lizards and Rain frogs.
 
 8. You suspect that homerange and mass are correlated in birds. We need a ratio that facilitates exploration of this prediction. First, build a new dataframe called `hra_ratio` that is limited to genus, species, mean.mass.g, log10.mass, log10.hra. Arrange it in ascending order by mean mass in grams.  
 
+```{r}
+hra_ratio <- homerange %>% 
+  filter(taxon == "birds") %>% 
+  select(genus, species, mean.mass.g, log10.mass, log10.hra) %>% 
+  arrange(mean.mass.g)
+hra_ratio
+```
+
+
 
 9. Replace the existing `hra_ratio` dataframe with a new dataframe that adds a column calculating the ratio of log 10 hra to log 10 mass. Call it `hra.mass.ratio`. Arrange it in descending order by mean mass in grams.  
+```{r}
+hra.ratio.mass <- hra_ratio %>% 
+  mutate(hra.mass.ratio = log10.hra / log10.mass) %>% 
+  arrange(mean.mass.g)
+
+hra.ratio.mass
+  
+```
 
 
 10. What is the lowest mass for birds with a `hra.mass.ratio` greater than or equal to 4.0?
+```{r}
+hra.ratio.mass %>% 
+  filter(hra.mass.ratio>=4.0) %>% 
+  arrange(mean.mass.g)
+```
 
+the lowest mass for birds is with a `hra.mass.ratio` greater than or equal to 4.0 is 5.15g
 
 11. Do a search online; what is the common name of the bird from #8 above? Place a link in your markdown file that takes us to a webpage with information on its biology.  
 
-12. What is the `hra.mass.ratio` for an ostrich? Show your work, please.  
+The common name for Wilsonia canadensis is Canada Warbler
 
+12. What is the `hra.mass.ratio` for an ostrich? Show your work, please.  
+```{r}
+homerange %>% 
+  filter(common.name == "ostrich") %>% 
+  select(species)
+```
+
+```{r}
+hra.ratio.mass %>% 
+  filter(species == "camelus")
+```
+
+The hra.mass.ratio for an ostrich is 1.602565.
 ## Push your final code to GitHub!
 Please be sure that you have check the `keep md` file in the knit preferences.  
