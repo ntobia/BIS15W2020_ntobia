@@ -9,10 +9,10 @@
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
-<meta name="author" content="Please Add Your Name Here" />
+<meta name="author" content="Joel Ledford" />
 
 
-<title>Lab 3 Homework</title>
+<title>Lab 2 Homework</title>
 
 <script>/*! jQuery v1.11.3 | (c) 2005, 2015 jQuery Foundation, Inc. | jquery.org/license */
 !function(a,b){"object"==typeof module&&"object"==typeof module.exports?module.exports=a.document?b(a,!0):function(a){if(!a.document)throw new Error("jQuery requires a window with a document");return b(a)}:b(a)}("undefined"!=typeof window?window:this,function(a,b){var c=[],d=c.slice,e=c.concat,f=c.push,g=c.indexOf,h={},i=h.toString,j=h.hasOwnProperty,k={},l="1.11.3",m=function(a,b){return new m.fn.init(a,b)},n=/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g,o=/^-ms-/,p=/-([\da-z])/gi,q=function(a,b){return b.toUpperCase()};m.fn=m.prototype={jquery:l,constructor:m,selector:"",length:0,toArray:function(){return d.call(this)},get:function(a){return null!=a?0>a?this[a+this.length]:this[a]:d.call(this)},pushStack:function(a){var b=m.merge(this.constructor(),a);return b.prevObject=this,b.context=this.context,b},each:function(a,b){return m.each(this,a,b)},map:function(a){return this.pushStack(m.map(this,function(b,c){return a.call(b,c,b)}))},slice:function(){return this.pushStack(d.apply(this,arguments))},first:function(){return this.eq(0)},last:function(){return this.eq(-1)},eq:function(a){var b=this.length,c=+a+(0>a?b:0);return this.pushStack(c>=0&&b>c?[this[c]]:[])},end:function(){return this.prevObject||this.constructor(null)},push:f,sort:c.sort,splice:c.splice},m.extend=m.fn.extend=function(){var a,b,c,d,e,f,g=arguments[0]||{},h=1,i=arguments.length,j=!1;for("boolean"==typeof g&&(j=g,g=arguments[h]||{},h++),"object"==typeof g||m.isFunction(g)||(g={}),h===i&&(g=this,h--);i>h;h++)if(null!=(e=arguments[h]))for(d in e)a=g[d],c=e[d],g!==c&&(j&&c&&(m.isPlainObject(c)||(b=m.isArray(c)))?(b?(b=!1,f=a&&m.isArray(a)?a:[]):f=a&&m.isPlainObject(a)?a:{},g[d]=m.extend(j,f,c)):void 0!==c&&(g[d]=c));return g},m.extend({expando:"jQuery"+(l+Math.random()).replace(/\D/g,""),isReady:!0,error:function(a){throw new Error(a)},noop:function(){},isFunction:function(a){return"function"===m.type(a)},isArray:Array.isArray||function(a){return"array"===m.type(a)},isWindow:function(a){return null!=a&&a==a.window},isNumeric:function(a){return!m.isArray(a)&&a-parseFloat(a)+1>=0},isEmptyObject:function(a){var b;for(b in a)return!1;return!0},isPlainObject:function(a){var b;if(!a||"object"!==m.type(a)||a.nodeType||m.isWindow(a))return!1;try{if(a.constructor&&!j.call(a,"constructor")&&!j.call(a.constructor.prototype,"isPrototypeOf"))return!1}catch(c){return!1}if(k.ownLast)for(b in a)return j.call(a,b);for(b in a);return void 0===b||j.call(a,b)},type:function(a){return null==a?a+"":"object"==typeof a||"function"==typeof a?h[i.call(a)]||"object":typeof a},globalEval:function(b){b&&m.trim(b)&&(a.execScript||function(b){a.eval.call(a,b)})(b)},camelCase:function(a){return a.replace(o,"ms-").replace(p,q)},nodeName:function(a,b){return a.nodeName&&a.nodeName.toLowerCase()===b.toLowerCase()},each:function(a,b,c){var d,e=0,f=a.length,g=r(a);if(c){if(g){for(;f>e;e++)if(d=b.apply(a[e],c),d===!1)break}else for(e in a)if(d=b.apply(a[e],c),d===!1)break}else if(g){for(;f>e;e++)if(d=b.call(a[e],e,a[e]),d===!1)break}else for(e in a)if(d=b.call(a[e],e,a[e]),d===!1)break;return a},trim:function(a){return null==a?"":(a+"").replace(n,"")},makeArray:function(a,b){var c=b||[];return null!=a&&(r(Object(a))?m.merge(c,"string"==typeof a?[a]:a):f.call(c,a)),c},inArray:function(a,b,c){var d;if(b){if(g)return g.call(b,a,c);for(d=b.length,c=c?0>c?Math.max(0,d+c):c:0;d>c;c++)if(c in b&&b[c]===a)return c}return-1},merge:function(a,b){var c=+b.length,d=0,e=a.length;while(c>d)a[e++]=b[d++];if(c!==c)while(void 0!==b[d])a[e++]=b[d++];return a.length=e,a},grep:function(a,b,c){for(var d,e=[],f=0,g=a.length,h=!c;g>f;f++)d=!b(a[f],f),d!==h&&e.push(a[f]);return e},map:function(a,b,c){var d,f=0,g=a.length,h=r(a),i=[];if(h)for(;g>f;f++)d=b(a[f],f,c),null!=d&&i.push(d);else for(f in a)d=b(a[f],f,c),null!=d&&i.push(d);return e.apply([],i)},guid:1,proxy:function(a,b){var c,e,f;return"string"==typeof b&&(f=a[b],b=a,a=f),m.isFunction(a)?(c=d.call(arguments,2),e=function(){return a.apply(b||this,c.concat(d.call(arguments)))},e.guid=a.guid=a.guid||m.guid++,e):void 0},now:function(){return+new Date},support:k}),m.each("Boolean Number String Function Array Date RegExp Object Error".split(" "),function(a,b){h["[object "+b+"]"]=b.toLowerCase()});function r(a){var b="length"in a&&a.length,c=m.type(a);return"function"===c||m.isWindow(a)?!1:1===a.nodeType&&b?!0:"array"===c||0===b||"number"==typeof b&&b>0&&b-1 in a}var s=function(a){var b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u="sizzle"+1*new Date,v=a.document,w=0,x=0,y=ha(),z=ha(),A=ha(),B=function(a,b){return a===b&&(l=!0),0},C=1<<31,D={}.hasOwnProperty,E=[],F=E.pop,G=E.push,H=E.push,I=E.slice,J=function(a,b){for(var c=0,d=a.length;d>c;c++)if(a[c]===b)return c;return-1},K="checked|selected|async|autofocus|autoplay|controls|defer|disabled|hidden|ismap|loop|multiple|open|readonly|required|scoped",L="[\\x20\\t\\r\\n\\f]",M="(?:\\\\.|[\\w-]|[^\\x00-\\xa0])+",N=M.replace("w","w#"),O="\\["+L+"*("+M+")(?:"+L+"*([*^$|!~]?=)"+L+"*(?:'((?:\\\\.|[^\\\\'])*)'|\"((?:\\\\.|[^\\\\\"])*)\"|("+N+"))|)"+L+"*\\]",P=":("+M+")(?:\\((('((?:\\\\.|[^\\\\'])*)'|\"((?:\\\\.|[^\\\\\"])*)\")|((?:\\\\.|[^\\\\()[\\]]|"+O+")*)|.*)\\)|)",Q=new RegExp(L+"+","g"),R=new RegExp("^"+L+"+|((?:^|[^\\\\])(?:\\\\.)*)"+L+"+$","g"),S=new RegExp("^"+L+"*,"+L+"*"),T=new RegExp("^"+L+"*([>+~]|"+L+")"+L+"*"),U=new RegExp("="+L+"*([^\\]'\"]*?)"+L+"*\\]","g"),V=new RegExp(P),W=new RegExp("^"+N+"$"),X={ID:new RegExp("^#("+M+")"),CLASS:new RegExp("^\\.("+M+")"),TAG:new RegExp("^("+M.replace("w","w*")+")"),ATTR:new RegExp("^"+O),PSEUDO:new RegExp("^"+P),CHILD:new RegExp("^:(only|first|last|nth|nth-last)-(child|of-type)(?:\\("+L+"*(even|odd|(([+-]|)(\\d*)n|)"+L+"*(?:([+-]|)"+L+"*(\\d+)|))"+L+"*\\)|)","i"),bool:new RegExp("^(?:"+K+")$","i"),needsContext:new RegExp("^"+L+"*[>+~]|:(even|odd|eq|gt|lt|nth|first|last)(?:\\("+L+"*((?:-\\d)?\\d*)"+L+"*\\)|)(?=[^-]|$)","i")},Y=/^(?:input|select|textarea|button)$/i,Z=/^h\d$/i,$=/^[^{]+\{\s*\[native \w/,_=/^(?:#([\w-]+)|(\w+)|\.([\w-]+))$/,aa=/[+~]/,ba=/'|\\/g,ca=new RegExp("\\\\([\\da-f]{1,6}"+L+"?|("+L+")|.)","ig"),da=function(a,b,c){var d="0x"+b-65536;return d!==d||c?b:0>d?String.fromCharCode(d+65536):String.fromCharCode(d>>10|55296,1023&d|56320)},ea=function(){m()};try{H.apply(E=I.call(v.childNodes),v.childNodes),E[v.childNodes.length].nodeType}catch(fa){H={apply:E.length?function(a,b){G.apply(a,I.call(b))}:function(a,b){var c=a.length,d=0;while(a[c++]=b[d++]);a.length=c-1}}}function ga(a,b,d,e){var f,h,j,k,l,o,r,s,w,x;if((b?b.ownerDocument||b:v)!==n&&m(b),b=b||n,d=d||[],k=b.nodeType,"string"!=typeof a||!a||1!==k&&9!==k&&11!==k)return d;if(!e&&p){if(11!==k&&(f=_.exec(a)))if(j=f[1]){if(9===k){if(h=b.getElementById(j),!h||!h.parentNode)return d;if(h.id===j)return d.push(h),d}else if(b.ownerDocument&&(h=b.ownerDocument.getElementById(j))&&t(b,h)&&h.id===j)return d.push(h),d}else{if(f[2])return H.apply(d,b.getElementsByTagName(a)),d;if((j=f[3])&&c.getElementsByClassName)return H.apply(d,b.getElementsByClassName(j)),d}if(c.qsa&&(!q||!q.test(a))){if(s=r=u,w=b,x=1!==k&&a,1===k&&"object"!==b.nodeName.toLowerCase()){o=g(a),(r=b.getAttribute("id"))?s=r.replace(ba,"\\$&"):b.setAttribute("id",s),s="[id='"+s+"'] ",l=o.length;while(l--)o[l]=s+ra(o[l]);w=aa.test(a)&&pa(b.parentNode)||b,x=o.join(",")}if(x)try{return H.apply(d,w.querySelectorAll(x)),d}catch(y){}finally{r||b.removeAttribute("id")}}}return i(a.replace(R,"$1"),b,d,e)}function ha(){var a=[];function b(c,e){return a.push(c+" ")>d.cacheLength&&delete b[a.shift()],b[c+" "]=e}return b}function ia(a){return a[u]=!0,a}function ja(a){var b=n.createElement("div");try{return!!a(b)}catch(c){return!1}finally{b.parentNode&&b.parentNode.removeChild(b),b=null}}function ka(a,b){var c=a.split("|"),e=a.length;while(e--)d.attrHandle[c[e]]=b}function la(a,b){var c=b&&a,d=c&&1===a.nodeType&&1===b.nodeType&&(~b.sourceIndex||C)-(~a.sourceIndex||C);if(d)return d;if(c)while(c=c.nextSibling)if(c===b)return-1;return a?1:-1}function ma(a){return function(b){var c=b.nodeName.toLowerCase();return"input"===c&&b.type===a}}function na(a){return function(b){var c=b.nodeName.toLowerCase();return("input"===c||"button"===c)&&b.type===a}}function oa(a){return ia(function(b){return b=+b,ia(function(c,d){var e,f=a([],c.length,b),g=f.length;while(g--)c[e=f[g]]&&(c[e]=!(d[e]=c[e]))})})}function pa(a){return a&&"undefined"!=typeof a.getElementsByTagName&&a}c=ga.support={},f=ga.isXML=function(a){var b=a&&(a.ownerDocument||a).documentElement;return b?"HTML"!==b.nodeName:!1},m=ga.setDocument=function(a){var b,e,g=a?a.ownerDocument||a:v;return g!==n&&9===g.nodeType&&g.documentElement?(n=g,o=g.documentElement,e=g.defaultView,e&&e!==e.top&&(e.addEventListener?e.addEventListener("unload",ea,!1):e.attachEvent&&e.attachEvent("onunload",ea)),p=!f(g),c.attributes=ja(function(a){return a.className="i",!a.getAttribute("className")}),c.getElementsByTagName=ja(function(a){return a.appendChild(g.createComment("")),!a.getElementsByTagName("*").length}),c.getElementsByClassName=$.test(g.getElementsByClassName),c.getById=ja(function(a){return o.appendChild(a).id=u,!g.getElementsByName||!g.getElementsByName(u).length}),c.getById?(d.find.ID=function(a,b){if("undefined"!=typeof b.getElementById&&p){var c=b.getElementById(a);return c&&c.parentNode?[c]:[]}},d.filter.ID=function(a){var b=a.replace(ca,da);return function(a){return a.getAttribute("id")===b}}):(delete d.find.ID,d.filter.ID=function(a){var b=a.replace(ca,da);return function(a){var c="undefined"!=typeof a.getAttributeNode&&a.getAttributeNode("id");return c&&c.value===b}}),d.find.TAG=c.getElementsByTagName?function(a,b){return"undefined"!=typeof b.getElementsByTagName?b.getElementsByTagName(a):c.qsa?b.querySelectorAll(a):void 0}:function(a,b){var c,d=[],e=0,f=b.getElementsByTagName(a);if("*"===a){while(c=f[e++])1===c.nodeType&&d.push(c);return d}return f},d.find.CLASS=c.getElementsByClassName&&function(a,b){return p?b.getElementsByClassName(a):void 0},r=[],q=[],(c.qsa=$.test(g.querySelectorAll))&&(ja(function(a){o.appendChild(a).innerHTML="<a id='"+u+"'></a><select id='"+u+"-\f]' msallowcapture=''><option selected=''></option></select>",a.querySelectorAll("[msallowcapture^='']").length&&q.push("[*^$]="+L+"*(?:''|\"\")"),a.querySelectorAll("[selected]").length||q.push("\\["+L+"*(?:value|"+K+")"),a.querySelectorAll("[id~="+u+"-]").length||q.push("~="),a.querySelectorAll(":checked").length||q.push(":checked"),a.querySelectorAll("a#"+u+"+*").length||q.push(".#.+[+~]")}),ja(function(a){var b=g.createElement("input");b.setAttribute("type","hidden"),a.appendChild(b).setAttribute("name","D"),a.querySelectorAll("[name=d]").length&&q.push("name"+L+"*[*^$|!~]?="),a.querySelectorAll(":enabled").length||q.push(":enabled",":disabled"),a.querySelectorAll("*,:x"),q.push(",.*:")})),(c.matchesSelector=$.test(s=o.matches||o.webkitMatchesSelector||o.mozMatchesSelector||o.oMatchesSelector||o.msMatchesSelector))&&ja(function(a){c.disconnectedMatch=s.call(a,"div"),s.call(a,"[s!='']:x"),r.push("!=",P)}),q=q.length&&new RegExp(q.join("|")),r=r.length&&new RegExp(r.join("|")),b=$.test(o.compareDocumentPosition),t=b||$.test(o.contains)?function(a,b){var c=9===a.nodeType?a.documentElement:a,d=b&&b.parentNode;return a===d||!(!d||1!==d.nodeType||!(c.contains?c.contains(d):a.compareDocumentPosition&&16&a.compareDocumentPosition(d)))}:function(a,b){if(b)while(b=b.parentNode)if(b===a)return!0;return!1},B=b?function(a,b){if(a===b)return l=!0,0;var d=!a.compareDocumentPosition-!b.compareDocumentPosition;return d?d:(d=(a.ownerDocument||a)===(b.ownerDocument||b)?a.compareDocumentPosition(b):1,1&d||!c.sortDetached&&b.compareDocumentPosition(a)===d?a===g||a.ownerDocument===v&&t(v,a)?-1:b===g||b.ownerDocument===v&&t(v,b)?1:k?J(k,a)-J(k,b):0:4&d?-1:1)}:function(a,b){if(a===b)return l=!0,0;var c,d=0,e=a.parentNode,f=b.parentNode,h=[a],i=[b];if(!e||!f)return a===g?-1:b===g?1:e?-1:f?1:k?J(k,a)-J(k,b):0;if(e===f)return la(a,b);c=a;while(c=c.parentNode)h.unshift(c);c=b;while(c=c.parentNode)i.unshift(c);while(h[d]===i[d])d++;return d?la(h[d],i[d]):h[d]===v?-1:i[d]===v?1:0},g):n},ga.matches=function(a,b){return ga(a,null,null,b)},ga.matchesSelector=function(a,b){if((a.ownerDocument||a)!==n&&m(a),b=b.replace(U,"='$1']"),!(!c.matchesSelector||!p||r&&r.test(b)||q&&q.test(b)))try{var d=s.call(a,b);if(d||c.disconnectedMatch||a.document&&11!==a.document.nodeType)return d}catch(e){}return ga(b,n,null,[a]).length>0},ga.contains=function(a,b){return(a.ownerDocument||a)!==n&&m(a),t(a,b)},ga.attr=function(a,b){(a.ownerDocument||a)!==n&&m(a);var e=d.attrHandle[b.toLowerCase()],f=e&&D.call(d.attrHandle,b.toLowerCase())?e(a,b,!p):void 0;return void 0!==f?f:c.attributes||!p?a.getAttribute(b):(f=a.getAttributeNode(b))&&f.specified?f.value:null},ga.error=function(a){throw new Error("Syntax error, unrecognized expression: "+a)},ga.uniqueSort=function(a){var b,d=[],e=0,f=0;if(l=!c.detectDuplicates,k=!c.sortStable&&a.slice(0),a.sort(B),l){while(b=a[f++])b===a[f]&&(e=d.push(f));while(e--)a.splice(d[e],1)}return k=null,a},e=ga.getText=function(a){var b,c="",d=0,f=a.nodeType;if(f){if(1===f||9===f||11===f){if("string"==typeof a.textContent)return a.textContent;for(a=a.firstChild;a;a=a.nextSibling)c+=e(a)}else if(3===f||4===f)return a.nodeValue}else while(b=a[d++])c+=e(b);return c},d=ga.selectors={cacheLength:50,createPseudo:ia,match:X,attrHandle:{},find:{},relative:{">":{dir:"parentNode",first:!0}," ":{dir:"parentNode"},"+":{dir:"previousSibling",first:!0},"~":{dir:"previousSibling"}},preFilter:{ATTR:function(a){return a[1]=a[1].replace(ca,da),a[3]=(a[3]||a[4]||a[5]||"").replace(ca,da),"~="===a[2]&&(a[3]=" "+a[3]+" "),a.slice(0,4)},CHILD:function(a){return a[1]=a[1].toLowerCase(),"nth"===a[1].slice(0,3)?(a[3]||ga.error(a[0]),a[4]=+(a[4]?a[5]+(a[6]||1):2*("even"===a[3]||"odd"===a[3])),a[5]=+(a[7]+a[8]||"odd"===a[3])):a[3]&&ga.error(a[0]),a},PSEUDO:function(a){var b,c=!a[6]&&a[2];return X.CHILD.test(a[0])?null:(a[3]?a[2]=a[4]||a[5]||"":c&&V.test(c)&&(b=g(c,!0))&&(b=c.indexOf(")",c.length-b)-c.length)&&(a[0]=a[0].slice(0,b),a[2]=c.slice(0,b)),a.slice(0,3))}},filter:{TAG:function(a){var b=a.replace(ca,da).toLowerCase();return"*"===a?function(){return!0}:function(a){return a.nodeName&&a.nodeName.toLowerCase()===b}},CLASS:function(a){var b=y[a+" "];return b||(b=new RegExp("(^|"+L+")"+a+"("+L+"|$)"))&&y(a,function(a){return b.test("string"==typeof a.className&&a.className||"undefined"!=typeof a.getAttribute&&a.getAttribute("class")||"")})},ATTR:function(a,b,c){return function(d){var e=ga.attr(d,a);return null==e?"!="===b:b?(e+="","="===b?e===c:"!="===b?e!==c:"^="===b?c&&0===e.indexOf(c):"*="===b?c&&e.indexOf(c)>-1:"$="===b?c&&e.slice(-c.length)===c:"~="===b?(" "+e.replace(Q," ")+" ").indexOf(c)>-1:"|="===b?e===c||e.slice(0,c.length+1)===c+"-":!1):!0}},CHILD:function(a,b,c,d,e){var f="nth"!==a.slice(0,3),g="last"!==a.slice(-4),h="of-type"===b;return 1===d&&0===e?function(a){return!!a.parentNode}:function(b,c,i){var j,k,l,m,n,o,p=f!==g?"nextSibling":"previousSibling",q=b.parentNode,r=h&&b.nodeName.toLowerCase(),s=!i&&!h;if(q){if(f){while(p){l=b;while(l=l[p])if(h?l.nodeName.toLowerCase()===r:1===l.nodeType)return!1;o=p="only"===a&&!o&&"nextSibling"}return!0}if(o=[g?q.firstChild:q.lastChild],g&&s){k=q[u]||(q[u]={}),j=k[a]||[],n=j[0]===w&&j[1],m=j[0]===w&&j[2],l=n&&q.childNodes[n];while(l=++n&&l&&l[p]||(m=n=0)||o.pop())if(1===l.nodeType&&++m&&l===b){k[a]=[w,n,m];break}}else if(s&&(j=(b[u]||(b[u]={}))[a])&&j[0]===w)m=j[1];else while(l=++n&&l&&l[p]||(m=n=0)||o.pop())if((h?l.nodeName.toLowerCase()===r:1===l.nodeType)&&++m&&(s&&((l[u]||(l[u]={}))[a]=[w,m]),l===b))break;return m-=e,m===d||m%d===0&&m/d>=0}}},PSEUDO:function(a,b){var c,e=d.pseudos[a]||d.setFilters[a.toLowerCase()]||ga.error("unsupported pseudo: "+a);return e[u]?e(b):e.length>1?(c=[a,a,"",b],d.setFilters.hasOwnProperty(a.toLowerCase())?ia(function(a,c){var d,f=e(a,b),g=f.length;while(g--)d=J(a,f[g]),a[d]=!(c[d]=f[g])}):function(a){return e(a,0,c)}):e}},pseudos:{not:ia(function(a){var b=[],c=[],d=h(a.replace(R,"$1"));return d[u]?ia(function(a,b,c,e){var f,g=d(a,null,e,[]),h=a.length;while(h--)(f=g[h])&&(a[h]=!(b[h]=f))}):function(a,e,f){return b[0]=a,d(b,null,f,c),b[0]=null,!c.pop()}}),has:ia(function(a){return function(b){return ga(a,b).length>0}}),contains:ia(function(a){return a=a.replace(ca,da),function(b){return(b.textContent||b.innerText||e(b)).indexOf(a)>-1}}),lang:ia(function(a){return W.test(a||"")||ga.error("unsupported lang: "+a),a=a.replace(ca,da).toLowerCase(),function(b){var c;do if(c=p?b.lang:b.getAttribute("xml:lang")||b.getAttribute("lang"))return c=c.toLowerCase(),c===a||0===c.indexOf(a+"-");while((b=b.parentNode)&&1===b.nodeType);return!1}}),target:function(b){var c=a.location&&a.location.hash;return c&&c.slice(1)===b.id},root:function(a){return a===o},focus:function(a){return a===n.activeElement&&(!n.hasFocus||n.hasFocus())&&!!(a.type||a.href||~a.tabIndex)},enabled:function(a){return a.disabled===!1},disabled:function(a){return a.disabled===!0},checked:function(a){var b=a.nodeName.toLowerCase();return"input"===b&&!!a.checked||"option"===b&&!!a.selected},selected:function(a){return a.parentNode&&a.parentNode.selectedIndex,a.selected===!0},empty:function(a){for(a=a.firstChild;a;a=a.nextSibling)if(a.nodeType<6)return!1;return!0},parent:function(a){return!d.pseudos.empty(a)},header:function(a){return Z.test(a.nodeName)},input:function(a){return Y.test(a.nodeName)},button:function(a){var b=a.nodeName.toLowerCase();return"input"===b&&"button"===a.type||"button"===b},text:function(a){var b;return"input"===a.nodeName.toLowerCase()&&"text"===a.type&&(null==(b=a.getAttribute("type"))||"text"===b.toLowerCase())},first:oa(function(){return[0]}),last:oa(function(a,b){return[b-1]}),eq:oa(function(a,b,c){return[0>c?c+b:c]}),even:oa(function(a,b){for(var c=0;b>c;c+=2)a.push(c);return a}),odd:oa(function(a,b){for(var c=1;b>c;c+=2)a.push(c);return a}),lt:oa(function(a,b,c){for(var d=0>c?c+b:c;--d>=0;)a.push(d);return a}),gt:oa(function(a,b,c){for(var d=0>c?c+b:c;++d<b;)a.push(d);return a})}},d.pseudos.nth=d.pseudos.eq;for(b in{radio:!0,checkbox:!0,file:!0,password:!0,image:!0})d.pseudos[b]=ma(b);for(b in{submit:!0,reset:!0})d.pseudos[b]=na(b);function qa(){}qa.prototype=d.filters=d.pseudos,d.setFilters=new qa,g=ga.tokenize=function(a,b){var c,e,f,g,h,i,j,k=z[a+" "];if(k)return b?0:k.slice(0);h=a,i=[],j=d.preFilter;while(h){(!c||(e=S.exec(h)))&&(e&&(h=h.slice(e[0].length)||h),i.push(f=[])),c=!1,(e=T.exec(h))&&(c=e.shift(),f.push({value:c,type:e[0].replace(R," ")}),h=h.slice(c.length));for(g in d.filter)!(e=X[g].exec(h))||j[g]&&!(e=j[g](e))||(c=e.shift(),f.push({value:c,type:g,matches:e}),h=h.slice(c.length));if(!c)break}return b?h.length:h?ga.error(a):z(a,i).slice(0)};function ra(a){for(var b=0,c=a.length,d="";c>b;b++)d+=a[b].value;return d}function sa(a,b,c){var d=b.dir,e=c&&"parentNode"===d,f=x++;return b.first?function(b,c,f){while(b=b[d])if(1===b.nodeType||e)return a(b,c,f)}:function(b,c,g){var h,i,j=[w,f];if(g){while(b=b[d])if((1===b.nodeType||e)&&a(b,c,g))return!0}else while(b=b[d])if(1===b.nodeType||e){if(i=b[u]||(b[u]={}),(h=i[d])&&h[0]===w&&h[1]===f)return j[2]=h[2];if(i[d]=j,j[2]=a(b,c,g))return!0}}}function ta(a){return a.length>1?function(b,c,d){var e=a.length;while(e--)if(!a[e](b,c,d))return!1;return!0}:a[0]}function ua(a,b,c){for(var d=0,e=b.length;e>d;d++)ga(a,b[d],c);return c}function va(a,b,c,d,e){for(var f,g=[],h=0,i=a.length,j=null!=b;i>h;h++)(f=a[h])&&(!c||c(f,d,e))&&(g.push(f),j&&b.push(h));return g}function wa(a,b,c,d,e,f){return d&&!d[u]&&(d=wa(d)),e&&!e[u]&&(e=wa(e,f)),ia(function(f,g,h,i){var j,k,l,m=[],n=[],o=g.length,p=f||ua(b||"*",h.nodeType?[h]:h,[]),q=!a||!f&&b?p:va(p,m,a,h,i),r=c?e||(f?a:o||d)?[]:g:q;if(c&&c(q,r,h,i),d){j=va(r,n),d(j,[],h,i),k=j.length;while(k--)(l=j[k])&&(r[n[k]]=!(q[n[k]]=l))}if(f){if(e||a){if(e){j=[],k=r.length;while(k--)(l=r[k])&&j.push(q[k]=l);e(null,r=[],j,i)}k=r.length;while(k--)(l=r[k])&&(j=e?J(f,l):m[k])>-1&&(f[j]=!(g[j]=l))}}else r=va(r===g?r.splice(o,r.length):r),e?e(null,g,r,i):H.apply(g,r)})}function xa(a){for(var b,c,e,f=a.length,g=d.relative[a[0].type],h=g||d.relative[" "],i=g?1:0,k=sa(function(a){return a===b},h,!0),l=sa(function(a){return J(b,a)>-1},h,!0),m=[function(a,c,d){var e=!g&&(d||c!==j)||((b=c).nodeType?k(a,c,d):l(a,c,d));return b=null,e}];f>i;i++)if(c=d.relative[a[i].type])m=[sa(ta(m),c)];else{if(c=d.filter[a[i].type].apply(null,a[i].matches),c[u]){for(e=++i;f>e;e++)if(d.relative[a[e].type])break;return wa(i>1&&ta(m),i>1&&ra(a.slice(0,i-1).concat({value:" "===a[i-2].type?"*":""})).replace(R,"$1"),c,e>i&&xa(a.slice(i,e)),f>e&&xa(a=a.slice(e)),f>e&&ra(a))}m.push(c)}return ta(m)}function ya(a,b){var c=b.length>0,e=a.length>0,f=function(f,g,h,i,k){var l,m,o,p=0,q="0",r=f&&[],s=[],t=j,u=f||e&&d.find.TAG("*",k),v=w+=null==t?1:Math.random()||.1,x=u.length;for(k&&(j=g!==n&&g);q!==x&&null!=(l=u[q]);q++){if(e&&l){m=0;while(o=a[m++])if(o(l,g,h)){i.push(l);break}k&&(w=v)}c&&((l=!o&&l)&&p--,f&&r.push(l))}if(p+=q,c&&q!==p){m=0;while(o=b[m++])o(r,s,g,h);if(f){if(p>0)while(q--)r[q]||s[q]||(s[q]=F.call(i));s=va(s)}H.apply(i,s),k&&!f&&s.length>0&&p+b.length>1&&ga.uniqueSort(i)}return k&&(w=v,j=t),r};return c?ia(f):f}return h=ga.compile=function(a,b){var c,d=[],e=[],f=A[a+" "];if(!f){b||(b=g(a)),c=b.length;while(c--)f=xa(b[c]),f[u]?d.push(f):e.push(f);f=A(a,ya(e,d)),f.selector=a}return f},i=ga.select=function(a,b,e,f){var i,j,k,l,m,n="function"==typeof a&&a,o=!f&&g(a=n.selector||a);if(e=e||[],1===o.length){if(j=o[0]=o[0].slice(0),j.length>2&&"ID"===(k=j[0]).type&&c.getById&&9===b.nodeType&&p&&d.relative[j[1].type]){if(b=(d.find.ID(k.matches[0].replace(ca,da),b)||[])[0],!b)return e;n&&(b=b.parentNode),a=a.slice(j.shift().value.length)}i=X.needsContext.test(a)?0:j.length;while(i--){if(k=j[i],d.relative[l=k.type])break;if((m=d.find[l])&&(f=m(k.matches[0].replace(ca,da),aa.test(j[0].type)&&pa(b.parentNode)||b))){if(j.splice(i,1),a=f.length&&ra(j),!a)return H.apply(e,f),e;break}}}return(n||h(a,o))(f,b,!p,e,aa.test(a)&&pa(b.parentNode)||b),e},c.sortStable=u.split("").sort(B).join("")===u,c.detectDuplicates=!!l,m(),c.sortDetached=ja(function(a){return 1&a.compareDocumentPosition(n.createElement("div"))}),ja(function(a){return a.innerHTML="<a href='#'></a>","#"===a.firstChild.getAttribute("href")})||ka("type|href|height|width",function(a,b,c){return c?void 0:a.getAttribute(b,"type"===b.toLowerCase()?1:2)}),c.attributes&&ja(function(a){return a.innerHTML="<input/>",a.firstChild.setAttribute("value",""),""===a.firstChild.getAttribute("value")})||ka("value",function(a,b,c){return c||"input"!==a.nodeName.toLowerCase()?void 0:a.defaultValue}),ja(function(a){return null==a.getAttribute("disabled")})||ka(K,function(a,b,c){var d;return c?void 0:a[b]===!0?b.toLowerCase():(d=a.getAttributeNode(b))&&d.specified?d.value:null}),ga}(a);m.find=s,m.expr=s.selectors,m.expr[":"]=m.expr.pseudos,m.unique=s.uniqueSort,m.text=s.getText,m.isXMLDoc=s.isXML,m.contains=s.contains;var t=m.expr.match.needsContext,u=/^<(\w+)\s*\/?>(?:<\/\1>|)$/,v=/^.[^:#\[\.,]*$/;function w(a,b,c){if(m.isFunction(b))return m.grep(a,function(a,d){return!!b.call(a,d,a)!==c});if(b.nodeType)return m.grep(a,function(a){return a===b!==c});if("string"==typeof b){if(v.test(b))return m.filter(b,a,c);b=m.filter(b,a)}return m.grep(a,function(a){return m.inArray(a,b)>=0!==c})}m.filter=function(a,b,c){var d=b[0];return c&&(a=":not("+a+")"),1===b.length&&1===d.nodeType?m.find.matchesSelector(d,a)?[d]:[]:m.find.matches(a,m.grep(b,function(a){return 1===a.nodeType}))},m.fn.extend({find:function(a){var b,c=[],d=this,e=d.length;if("string"!=typeof a)return this.pushStack(m(a).filter(function(){for(b=0;e>b;b++)if(m.contains(d[b],this))return!0}));for(b=0;e>b;b++)m.find(a,d[b],c);return c=this.pushStack(e>1?m.unique(c):c),c.selector=this.selector?this.selector+" "+a:a,c},filter:function(a){return this.pushStack(w(this,a||[],!1))},not:function(a){return this.pushStack(w(this,a||[],!0))},is:function(a){return!!w(this,"string"==typeof a&&t.test(a)?m(a):a||[],!1).length}});var x,y=a.document,z=/^(?:\s*(<[\w\W]+>)[^>]*|#([\w-]*))$/,A=m.fn.init=function(a,b){var c,d;if(!a)return this;if("string"==typeof a){if(c="<"===a.charAt(0)&&">"===a.charAt(a.length-1)&&a.length>=3?[null,a,null]:z.exec(a),!c||!c[1]&&b)return!b||b.jquery?(b||x).find(a):this.constructor(b).find(a);if(c[1]){if(b=b instanceof m?b[0]:b,m.merge(this,m.parseHTML(c[1],b&&b.nodeType?b.ownerDocument||b:y,!0)),u.test(c[1])&&m.isPlainObject(b))for(c in b)m.isFunction(this[c])?this[c](b[c]):this.attr(c,b[c]);return this}if(d=y.getElementById(c[2]),d&&d.parentNode){if(d.id!==c[2])return x.find(a);this.length=1,this[0]=d}return this.context=y,this.selector=a,this}return a.nodeType?(this.context=this[0]=a,this.length=1,this):m.isFunction(a)?"undefined"!=typeof x.ready?x.ready(a):a(m):(void 0!==a.selector&&(this.selector=a.selector,this.context=a.context),m.makeArray(a,this))};A.prototype=m.fn,x=m(y);var B=/^(?:parents|prev(?:Until|All))/,C={children:!0,contents:!0,next:!0,prev:!0};m.extend({dir:function(a,b,c){var d=[],e=a[b];while(e&&9!==e.nodeType&&(void 0===c||1!==e.nodeType||!m(e).is(c)))1===e.nodeType&&d.push(e),e=e[b];return d},sibling:function(a,b){for(var c=[];a;a=a.nextSibling)1===a.nodeType&&a!==b&&c.push(a);return c}}),m.fn.extend({has:function(a){var b,c=m(a,this),d=c.length;return this.filter(function(){for(b=0;d>b;b++)if(m.contains(this,c[b]))return!0})},closest:function(a,b){for(var c,d=0,e=this.length,f=[],g=t.test(a)||"string"!=typeof a?m(a,b||this.context):0;e>d;d++)for(c=this[d];c&&c!==b;c=c.parentNode)if(c.nodeType<11&&(g?g.index(c)>-1:1===c.nodeType&&m.find.matchesSelector(c,a))){f.push(c);break}return this.pushStack(f.length>1?m.unique(f):f)},index:function(a){return a?"string"==typeof a?m.inArray(this[0],m(a)):m.inArray(a.jquery?a[0]:a,this):this[0]&&this[0].parentNode?this.first().prevAll().length:-1},add:function(a,b){return this.pushStack(m.unique(m.merge(this.get(),m(a,b))))},addBack:function(a){return this.add(null==a?this.prevObject:this.prevObject.filter(a))}});function D(a,b){do a=a[b];while(a&&1!==a.nodeType);return a}m.each({parent:function(a){var b=a.parentNode;return b&&11!==b.nodeType?b:null},parents:function(a){return m.dir(a,"parentNode")},parentsUntil:function(a,b,c){return m.dir(a,"parentNode",c)},next:function(a){return D(a,"nextSibling")},prev:function(a){return D(a,"previousSibling")},nextAll:function(a){return m.dir(a,"nextSibling")},prevAll:function(a){return m.dir(a,"previousSibling")},nextUntil:function(a,b,c){return m.dir(a,"nextSibling",c)},prevUntil:function(a,b,c){return m.dir(a,"previousSibling",c)},siblings:function(a){return m.sibling((a.parentNode||{}).firstChild,a)},children:function(a){return m.sibling(a.firstChild)},contents:function(a){return m.nodeName(a,"iframe")?a.contentDocument||a.contentWindow.document:m.merge([],a.childNodes)}},function(a,b){m.fn[a]=function(c,d){var e=m.map(this,b,c);return"Until"!==a.slice(-5)&&(d=c),d&&"string"==typeof d&&(e=m.filter(d,e)),this.length>1&&(C[a]||(e=m.unique(e)),B.test(a)&&(e=e.reverse())),this.pushStack(e)}});var E=/\S+/g,F={};function G(a){var b=F[a]={};return m.each(a.match(E)||[],function(a,c){b[c]=!0}),b}m.Callbacks=function(a){a="string"==typeof a?F[a]||G(a):m.extend({},a);var b,c,d,e,f,g,h=[],i=!a.once&&[],j=function(l){for(c=a.memory&&l,d=!0,f=g||0,g=0,e=h.length,b=!0;h&&e>f;f++)if(h[f].apply(l[0],l[1])===!1&&a.stopOnFalse){c=!1;break}b=!1,h&&(i?i.length&&j(i.shift()):c?h=[]:k.disable())},k={add:function(){if(h){var d=h.length;!function f(b){m.each(b,function(b,c){var d=m.type(c);"function"===d?a.unique&&k.has(c)||h.push(c):c&&c.length&&"string"!==d&&f(c)})}(arguments),b?e=h.length:c&&(g=d,j(c))}return this},remove:function(){return h&&m.each(arguments,function(a,c){var d;while((d=m.inArray(c,h,d))>-1)h.splice(d,1),b&&(e>=d&&e--,f>=d&&f--)}),this},has:function(a){return a?m.inArray(a,h)>-1:!(!h||!h.length)},empty:function(){return h=[],e=0,this},disable:function(){return h=i=c=void 0,this},disabled:function(){return!h},lock:function(){return i=void 0,c||k.disable(),this},locked:function(){return!i},fireWith:function(a,c){return!h||d&&!i||(c=c||[],c=[a,c.slice?c.slice():c],b?i.push(c):j(c)),this},fire:function(){return k.fireWith(this,arguments),this},fired:function(){return!!d}};return k},m.extend({Deferred:function(a){var b=[["resolve","done",m.Callbacks("once memory"),"resolved"],["reject","fail",m.Callbacks("once memory"),"rejected"],["notify","progress",m.Callbacks("memory")]],c="pending",d={state:function(){return c},always:function(){return e.done(arguments).fail(arguments),this},then:function(){var a=arguments;return m.Deferred(function(c){m.each(b,function(b,f){var g=m.isFunction(a[b])&&a[b];e[f[1]](function(){var a=g&&g.apply(this,arguments);a&&m.isFunction(a.promise)?a.promise().done(c.resolve).fail(c.reject).progress(c.notify):c[f[0]+"With"](this===d?c.promise():this,g?[a]:arguments)})}),a=null}).promise()},promise:function(a){return null!=a?m.extend(a,d):d}},e={};return d.pipe=d.then,m.each(b,function(a,f){var g=f[2],h=f[3];d[f[1]]=g.add,h&&g.add(function(){c=h},b[1^a][2].disable,b[2][2].lock),e[f[0]]=function(){return e[f[0]+"With"](this===e?d:this,arguments),this},e[f[0]+"With"]=g.fireWith}),d.promise(e),a&&a.call(e,e),e},when:function(a){var b=0,c=d.call(arguments),e=c.length,f=1!==e||a&&m.isFunction(a.promise)?e:0,g=1===f?a:m.Deferred(),h=function(a,b,c){return function(e){b[a]=this,c[a]=arguments.length>1?d.call(arguments):e,c===i?g.notifyWith(b,c):--f||g.resolveWith(b,c)}},i,j,k;if(e>1)for(i=new Array(e),j=new Array(e),k=new Array(e);e>b;b++)c[b]&&m.isFunction(c[b].promise)?c[b].promise().done(h(b,k,c)).fail(g.reject).progress(h(b,j,i)):--f;return f||g.resolveWith(k,c),g.promise()}});var H;m.fn.ready=function(a){return m.ready.promise().done(a),this},m.extend({isReady:!1,readyWait:1,holdReady:function(a){a?m.readyWait++:m.ready(!0)},ready:function(a){if(a===!0?!--m.readyWait:!m.isReady){if(!y.body)return setTimeout(m.ready);m.isReady=!0,a!==!0&&--m.readyWait>0||(H.resolveWith(y,[m]),m.fn.triggerHandler&&(m(y).triggerHandler("ready"),m(y).off("ready")))}}});function I(){y.addEventListener?(y.removeEventListener("DOMContentLoaded",J,!1),a.removeEventListener("load",J,!1)):(y.detachEvent("onreadystatechange",J),a.detachEvent("onload",J))}function J(){(y.addEventListener||"load"===event.type||"complete"===y.readyState)&&(I(),m.ready())}m.ready.promise=function(b){if(!H)if(H=m.Deferred(),"complete"===y.readyState)setTimeout(m.ready);else if(y.addEventListener)y.addEventListener("DOMContentLoaded",J,!1),a.addEventListener("load",J,!1);else{y.attachEvent("onreadystatechange",J),a.attachEvent("onload",J);var c=!1;try{c=null==a.frameElement&&y.documentElement}catch(d){}c&&c.doScroll&&!function e(){if(!m.isReady){try{c.doScroll("left")}catch(a){return setTimeout(e,50)}I(),m.ready()}}()}return H.promise(b)};var K="undefined",L;for(L in m(k))break;k.ownLast="0"!==L,k.inlineBlockNeedsLayout=!1,m(function(){var a,b,c,d;c=y.getElementsByTagName("body")[0],c&&c.style&&(b=y.createElement("div"),d=y.createElement("div"),d.style.cssText="position:absolute;border:0;width:0;height:0;top:0;left:-9999px",c.appendChild(d).appendChild(b),typeof b.style.zoom!==K&&(b.style.cssText="display:inline;margin:0;border:0;padding:1px;width:1px;zoom:1",k.inlineBlockNeedsLayout=a=3===b.offsetWidth,a&&(c.style.zoom=1)),c.removeChild(d))}),function(){var a=y.createElement("div");if(null==k.deleteExpando){k.deleteExpando=!0;try{delete a.test}catch(b){k.deleteExpando=!1}}a=null}(),m.acceptData=function(a){var b=m.noData[(a.nodeName+" ").toLowerCase()],c=+a.nodeType||1;return 1!==c&&9!==c?!1:!b||b!==!0&&a.getAttribute("classid")===b};var M=/^(?:\{[\w\W]*\}|\[[\w\W]*\])$/,N=/([A-Z])/g;function O(a,b,c){if(void 0===c&&1===a.nodeType){var d="data-"+b.replace(N,"-$1").toLowerCase();if(c=a.getAttribute(d),"string"==typeof c){try{c="true"===c?!0:"false"===c?!1:"null"===c?null:+c+""===c?+c:M.test(c)?m.parseJSON(c):c}catch(e){}m.data(a,b,c)}else c=void 0}return c}function P(a){var b;for(b in a)if(("data"!==b||!m.isEmptyObject(a[b]))&&"toJSON"!==b)return!1;
@@ -386,8 +386,8 @@ summary {
 
 
 
-<h1 class="title toc-ignore">Lab 3 Homework</h1>
-<h4 class="author">Please Add Your Name Here</h4>
+<h1 class="title toc-ignore">Lab 2 Homework</h1>
+<h4 class="author">Joel Ledford</h4>
 <h4 class="date">Winter 2020</h4>
 
 </div>
@@ -395,392 +395,361 @@ summary {
 
 <div id="instructions" class="section level2">
 <h2>Instructions</h2>
-<p>Answer the following questions and complete the exercises in RMarkdown. Please embed all of your code and push your final work to your repository. Your final lab report should be organized, clean, and run free from errors. Remember, you must remove the <code>#</code> for the included code chunks to run.</p>
+<p>Answer the following questions and complete the exercises in RMarkdown. Please embed all of your code and push your final work to our <a href="https://github.com/FRS417-DataScienceBiologists">GitHub repository</a>. I will randomly select a few examples of student work at the start of each session to use as examples so be sure that your code is working to the best of your ability.</p>
 </div>
-<div id="load-the-tidyverse" class="section level2">
-<h2>Load the tidyverse</h2>
-<pre class="r"><code>library(tidyverse)</code></pre>
+<div id="load-the-tidyversey" class="section level2">
+<h2>Load the tidyversey</h2>
+<pre class="r"><code>library(&quot;tidyverse&quot;)</code></pre>
+<pre><code>## -- Attaching packages --------------------------------------------------------------------------------------------------------------------- tidyverse 1.3.0 --</code></pre>
+<pre><code>## v ggplot2 3.2.1     v purrr   0.3.3
+## v tibble  2.1.3     v dplyr   0.8.3
+## v tidyr   1.0.0     v stringr 1.4.0
+## v readr   1.3.1     v forcats 0.4.0</code></pre>
+<pre><code>## -- Conflicts ------------------------------------------------------------------------------------------------------------------------ tidyverse_conflicts() --
+## x dplyr::filter() masks stats::filter()
+## x dplyr::lag()    masks stats::lag()</code></pre>
 </div>
-<div id="data" class="section level2">
-<h2>Data</h2>
-<p>For the homework, we will use data about vertebrate home range sizes. The data are in the class folder, but the reference is below.</p>
-<p><strong>Database of vertebrate home range sizes.</strong><br />
-Reference: Tamburello N, Cote IM, Dulvy NK (2015) Energy and the scaling of animal space use. The American Naturalist 186(2):196-211. <a href="http://dx.doi.org/10.1086/682070" class="uri">http://dx.doi.org/10.1086/682070</a>.<br />
-Data: <a href="http://datadryad.org/resource/doi:10.5061/dryad.q5j65/1" class="uri">http://datadryad.org/resource/doi:10.5061/dryad.q5j65/1</a></p>
+<div id="mammals-sleep" class="section level2">
+<h2>Mammals Sleep</h2>
+<p>For this assignment, we are going to use built-in data on mammal sleep patterns.</p>
+<pre class="r"><code>msleep</code></pre>
+<pre><code>## # A tibble: 83 x 11
+##    name  genus vore  order conservation sleep_total sleep_rem sleep_cycle awake
+##    &lt;chr&gt; &lt;chr&gt; &lt;chr&gt; &lt;chr&gt; &lt;chr&gt;              &lt;dbl&gt;     &lt;dbl&gt;       &lt;dbl&gt; &lt;dbl&gt;
+##  1 Chee~ Acin~ carni Carn~ lc                  12.1      NA        NA      11.9
+##  2 Owl ~ Aotus omni  Prim~ &lt;NA&gt;                17         1.8      NA       7  
+##  3 Moun~ Aplo~ herbi Rode~ nt                  14.4       2.4      NA       9.6
+##  4 Grea~ Blar~ omni  Sori~ lc                  14.9       2.3       0.133   9.1
+##  5 Cow   Bos   herbi Arti~ domesticated         4         0.7       0.667  20  
+##  6 Thre~ Brad~ herbi Pilo~ &lt;NA&gt;                14.4       2.2       0.767   9.6
+##  7 Nort~ Call~ carni Carn~ vu                   8.7       1.4       0.383  15.3
+##  8 Vesp~ Calo~ &lt;NA&gt;  Rode~ &lt;NA&gt;                 7        NA        NA      17  
+##  9 Dog   Canis carni Carn~ domesticated        10.1       2.9       0.333  13.9
+## 10 Roe ~ Capr~ herbi Arti~ lc                   3        NA        NA      21  
+## # ... with 73 more rows, and 2 more variables: brainwt &lt;dbl&gt;, bodywt &lt;dbl&gt;</code></pre>
 <ol style="list-style-type: decimal">
-<li>Load the data into a new object called <code>homerange</code>.</li>
+<li>From which publication are these data taken from? Don’t do an internet search; show the code that you would use to find out in R.</li>
 </ol>
-<pre class="r"><code>homerange &lt;- readr::read_csv(&quot;data/Tamburelloetal_HomeRangeDatabase.csv&quot;)</code></pre>
-<pre><code>## Parsed with column specification:
-## cols(
-##   .default = col_character(),
-##   mean.mass.g = col_double(),
-##   log10.mass = col_double(),
-##   mean.hra.m2 = col_double(),
-##   log10.hra = col_double(),
-##   preymass = col_double(),
-##   log10.preymass = col_double(),
-##   PPMR = col_double()
-## )</code></pre>
-<pre><code>## See spec(...) for full column specifications.</code></pre>
+<p>Updated sleep times and weights were taken from V. M. Savage and G. B. West.</p>
+<pre class="r"><code>?msleep</code></pre>
+<pre><code>## starting httpd help server ... done</code></pre>
 <ol start="2" style="list-style-type: decimal">
-<li>Use <code>spec()</code> to see the full details of the columns.</li>
+<li>Put these data into a new object <code>sleep</code>. Make sure they are organized as a data frame.</li>
 </ol>
-<pre class="r"><code>spec(homerange)</code></pre>
-<pre><code>## cols(
-##   taxon = col_character(),
-##   common.name = col_character(),
-##   class = col_character(),
-##   order = col_character(),
-##   family = col_character(),
-##   genus = col_character(),
-##   species = col_character(),
-##   primarymethod = col_character(),
-##   N = col_character(),
-##   mean.mass.g = col_double(),
-##   log10.mass = col_double(),
-##   alternative.mass.reference = col_character(),
-##   mean.hra.m2 = col_double(),
-##   log10.hra = col_double(),
-##   hra.reference = col_character(),
-##   realm = col_character(),
-##   thermoregulation = col_character(),
-##   locomotion = col_character(),
-##   trophic.guild = col_character(),
-##   dimension = col_character(),
-##   preymass = col_double(),
-##   log10.preymass = col_double(),
-##   PPMR = col_double(),
-##   prey.size.reference = col_character()
-## )</code></pre>
+<pre class="r"><code>sleep &lt;- data.frame(msleep)
+sleep</code></pre>
+<pre><code>##                              name         genus    vore           order
+## 1                         Cheetah      Acinonyx   carni       Carnivora
+## 2                      Owl monkey         Aotus    omni        Primates
+## 3                 Mountain beaver    Aplodontia   herbi        Rodentia
+## 4      Greater short-tailed shrew       Blarina    omni    Soricomorpha
+## 5                             Cow           Bos   herbi    Artiodactyla
+## 6                Three-toed sloth      Bradypus   herbi          Pilosa
+## 7               Northern fur seal   Callorhinus   carni       Carnivora
+## 8                    Vesper mouse       Calomys    &lt;NA&gt;        Rodentia
+## 9                             Dog         Canis   carni       Carnivora
+## 10                       Roe deer     Capreolus   herbi    Artiodactyla
+## 11                           Goat         Capri   herbi    Artiodactyla
+## 12                     Guinea pig         Cavis   herbi        Rodentia
+## 13                         Grivet Cercopithecus    omni        Primates
+## 14                     Chinchilla    Chinchilla   herbi        Rodentia
+## 15                Star-nosed mole     Condylura    omni    Soricomorpha
+## 16      African giant pouched rat    Cricetomys    omni        Rodentia
+## 17      Lesser short-tailed shrew     Cryptotis    omni    Soricomorpha
+## 18           Long-nosed armadillo       Dasypus   carni       Cingulata
+## 19                     Tree hyrax   Dendrohyrax   herbi      Hyracoidea
+## 20         North American Opossum     Didelphis    omni Didelphimorphia
+## 21                 Asian elephant       Elephas   herbi     Proboscidea
+## 22                  Big brown bat     Eptesicus insecti      Chiroptera
+## 23                          Horse         Equus   herbi  Perissodactyla
+## 24                         Donkey         Equus   herbi  Perissodactyla
+## 25              European hedgehog     Erinaceus    omni  Erinaceomorpha
+## 26                   Patas monkey  Erythrocebus    omni        Primates
+## 27      Western american chipmunk      Eutamias   herbi        Rodentia
+## 28                   Domestic cat         Felis   carni       Carnivora
+## 29                         Galago        Galago    omni        Primates
+## 30                        Giraffe       Giraffa   herbi    Artiodactyla
+## 31                    Pilot whale Globicephalus   carni         Cetacea
+## 32                      Gray seal  Haliochoerus   carni       Carnivora
+## 33                     Gray hyrax   Heterohyrax   herbi      Hyracoidea
+## 34                          Human          Homo    omni        Primates
+## 35                 Mongoose lemur         Lemur   herbi        Primates
+## 36               African elephant     Loxodonta   herbi     Proboscidea
+## 37           Thick-tailed opposum    Lutreolina   carni Didelphimorphia
+## 38                        Macaque        Macaca    omni        Primates
+## 39               Mongolian gerbil      Meriones   herbi        Rodentia
+## 40                 Golden hamster  Mesocricetus   herbi        Rodentia
+## 41                          Vole       Microtus   herbi        Rodentia
+## 42                    House mouse           Mus   herbi        Rodentia
+## 43               Little brown bat        Myotis insecti      Chiroptera
+## 44           Round-tailed muskrat      Neofiber   herbi        Rodentia
+## 45                     Slow loris     Nyctibeus   carni        Primates
+## 46                           Degu       Octodon   herbi        Rodentia
+## 47     Northern grasshopper mouse     Onychomys   carni        Rodentia
+## 48                         Rabbit   Oryctolagus   herbi      Lagomorpha
+## 49                          Sheep          Ovis   herbi    Artiodactyla
+## 50                     Chimpanzee           Pan    omni        Primates
+## 51                          Tiger      Panthera   carni       Carnivora
+## 52                         Jaguar      Panthera   carni       Carnivora
+## 53                           Lion      Panthera   carni       Carnivora
+## 54                         Baboon         Papio    omni        Primates
+## 55                Desert hedgehog   Paraechinus    &lt;NA&gt;  Erinaceomorpha
+## 56                          Potto  Perodicticus    omni        Primates
+## 57                     Deer mouse    Peromyscus    &lt;NA&gt;        Rodentia
+## 58                      Phalanger     Phalanger    &lt;NA&gt;   Diprotodontia
+## 59                   Caspian seal         Phoca   carni       Carnivora
+## 60                Common porpoise      Phocoena   carni         Cetacea
+## 61                        Potoroo      Potorous   herbi   Diprotodontia
+## 62                Giant armadillo    Priodontes insecti       Cingulata
+## 63                     Rock hyrax      Procavia    &lt;NA&gt;      Hyracoidea
+## 64                 Laboratory rat        Rattus   herbi        Rodentia
+## 65          African striped mouse     Rhabdomys    omni        Rodentia
+## 66                Squirrel monkey       Saimiri    omni        Primates
+## 67          Eastern american mole      Scalopus insecti    Soricomorpha
+## 68                     Cotton rat      Sigmodon   herbi        Rodentia
+## 69                       Mole rat        Spalax    &lt;NA&gt;        Rodentia
+## 70         Arctic ground squirrel  Spermophilus   herbi        Rodentia
+## 71 Thirteen-lined ground squirrel  Spermophilus   herbi        Rodentia
+## 72 Golden-mantled ground squirrel  Spermophilus   herbi        Rodentia
+## 73                     Musk shrew        Suncus    &lt;NA&gt;    Soricomorpha
+## 74                            Pig           Sus    omni    Artiodactyla
+## 75            Short-nosed echidna  Tachyglossus insecti     Monotremata
+## 76      Eastern american chipmunk        Tamias   herbi        Rodentia
+## 77                Brazilian tapir       Tapirus   herbi  Perissodactyla
+## 78                         Tenrec        Tenrec    omni    Afrosoricida
+## 79                     Tree shrew        Tupaia    omni      Scandentia
+## 80           Bottle-nosed dolphin      Tursiops   carni         Cetacea
+## 81                          Genet       Genetta   carni       Carnivora
+## 82                     Arctic fox        Vulpes   carni       Carnivora
+## 83                        Red fox        Vulpes   carni       Carnivora
+##    conservation sleep_total sleep_rem sleep_cycle awake brainwt   bodywt
+## 1            lc        12.1        NA          NA 11.90      NA   50.000
+## 2          &lt;NA&gt;        17.0       1.8          NA  7.00 0.01550    0.480
+## 3            nt        14.4       2.4          NA  9.60      NA    1.350
+## 4            lc        14.9       2.3   0.1333333  9.10 0.00029    0.019
+## 5  domesticated         4.0       0.7   0.6666667 20.00 0.42300  600.000
+## 6          &lt;NA&gt;        14.4       2.2   0.7666667  9.60      NA    3.850
+## 7            vu         8.7       1.4   0.3833333 15.30      NA   20.490
+## 8          &lt;NA&gt;         7.0        NA          NA 17.00      NA    0.045
+## 9  domesticated        10.1       2.9   0.3333333 13.90 0.07000   14.000
+## 10           lc         3.0        NA          NA 21.00 0.09820   14.800
+## 11           lc         5.3       0.6          NA 18.70 0.11500   33.500
+## 12 domesticated         9.4       0.8   0.2166667 14.60 0.00550    0.728
+## 13           lc        10.0       0.7          NA 14.00      NA    4.750
+## 14 domesticated        12.5       1.5   0.1166667 11.50 0.00640    0.420
+## 15           lc        10.3       2.2          NA 13.70 0.00100    0.060
+## 16         &lt;NA&gt;         8.3       2.0          NA 15.70 0.00660    1.000
+## 17           lc         9.1       1.4   0.1500000 14.90 0.00014    0.005
+## 18           lc        17.4       3.1   0.3833333  6.60 0.01080    3.500
+## 19           lc         5.3       0.5          NA 18.70 0.01230    2.950
+## 20           lc        18.0       4.9   0.3333333  6.00 0.00630    1.700
+## 21           en         3.9        NA          NA 20.10 4.60300 2547.000
+## 22           lc        19.7       3.9   0.1166667  4.30 0.00030    0.023
+## 23 domesticated         2.9       0.6   1.0000000 21.10 0.65500  521.000
+## 24 domesticated         3.1       0.4          NA 20.90 0.41900  187.000
+## 25           lc        10.1       3.5   0.2833333 13.90 0.00350    0.770
+## 26           lc        10.9       1.1          NA 13.10 0.11500   10.000
+## 27         &lt;NA&gt;        14.9        NA          NA  9.10      NA    0.071
+## 28 domesticated        12.5       3.2   0.4166667 11.50 0.02560    3.300
+## 29         &lt;NA&gt;         9.8       1.1   0.5500000 14.20 0.00500    0.200
+## 30           cd         1.9       0.4          NA 22.10      NA  899.995
+## 31           cd         2.7       0.1          NA 21.35      NA  800.000
+## 32           lc         6.2       1.5          NA 17.80 0.32500   85.000
+## 33           lc         6.3       0.6          NA 17.70 0.01227    2.625
+## 34         &lt;NA&gt;         8.0       1.9   1.5000000 16.00 1.32000   62.000
+## 35           vu         9.5       0.9          NA 14.50      NA    1.670
+## 36           vu         3.3        NA          NA 20.70 5.71200 6654.000
+## 37           lc        19.4       6.6          NA  4.60      NA    0.370
+## 38         &lt;NA&gt;        10.1       1.2   0.7500000 13.90 0.17900    6.800
+## 39           lc        14.2       1.9          NA  9.80      NA    0.053
+## 40           en        14.3       3.1   0.2000000  9.70 0.00100    0.120
+## 41         &lt;NA&gt;        12.8        NA          NA 11.20      NA    0.035
+## 42           nt        12.5       1.4   0.1833333 11.50 0.00040    0.022
+## 43         &lt;NA&gt;        19.9       2.0   0.2000000  4.10 0.00025    0.010
+## 44           nt        14.6        NA          NA  9.40      NA    0.266
+## 45         &lt;NA&gt;        11.0        NA          NA 13.00 0.01250    1.400
+## 46           lc         7.7       0.9          NA 16.30      NA    0.210
+## 47           lc        14.5        NA          NA  9.50      NA    0.028
+## 48 domesticated         8.4       0.9   0.4166667 15.60 0.01210    2.500
+## 49 domesticated         3.8       0.6          NA 20.20 0.17500   55.500
+## 50         &lt;NA&gt;         9.7       1.4   1.4166667 14.30 0.44000   52.200
+## 51           en        15.8        NA          NA  8.20      NA  162.564
+## 52           nt        10.4        NA          NA 13.60 0.15700  100.000
+## 53           vu        13.5        NA          NA 10.50      NA  161.499
+## 54         &lt;NA&gt;         9.4       1.0   0.6666667 14.60 0.18000   25.235
+## 55           lc        10.3       2.7          NA 13.70 0.00240    0.550
+## 56           lc        11.0        NA          NA 13.00      NA    1.100
+## 57         &lt;NA&gt;        11.5        NA          NA 12.50      NA    0.021
+## 58         &lt;NA&gt;        13.7       1.8          NA 10.30 0.01140    1.620
+## 59           vu         3.5       0.4          NA 20.50      NA   86.000
+## 60           vu         5.6        NA          NA 18.45      NA   53.180
+## 61         &lt;NA&gt;        11.1       1.5          NA 12.90      NA    1.100
+## 62           en        18.1       6.1          NA  5.90 0.08100   60.000
+## 63           lc         5.4       0.5          NA 18.60 0.02100    3.600
+## 64           lc        13.0       2.4   0.1833333 11.00 0.00190    0.320
+## 65         &lt;NA&gt;         8.7        NA          NA 15.30      NA    0.044
+## 66         &lt;NA&gt;         9.6       1.4          NA 14.40 0.02000    0.743
+## 67           lc         8.4       2.1   0.1666667 15.60 0.00120    0.075
+## 68         &lt;NA&gt;        11.3       1.1   0.1500000 12.70 0.00118    0.148
+## 69         &lt;NA&gt;        10.6       2.4          NA 13.40 0.00300    0.122
+## 70           lc        16.6        NA          NA  7.40 0.00570    0.920
+## 71           lc        13.8       3.4   0.2166667 10.20 0.00400    0.101
+## 72           lc        15.9       3.0          NA  8.10      NA    0.205
+## 73         &lt;NA&gt;        12.8       2.0   0.1833333 11.20 0.00033    0.048
+## 74 domesticated         9.1       2.4   0.5000000 14.90 0.18000   86.250
+## 75         &lt;NA&gt;         8.6        NA          NA 15.40 0.02500    4.500
+## 76         &lt;NA&gt;        15.8        NA          NA  8.20      NA    0.112
+## 77           vu         4.4       1.0   0.9000000 19.60 0.16900  207.501
+## 78         &lt;NA&gt;        15.6       2.3          NA  8.40 0.00260    0.900
+## 79         &lt;NA&gt;         8.9       2.6   0.2333333 15.10 0.00250    0.104
+## 80         &lt;NA&gt;         5.2        NA          NA 18.80      NA  173.330
+## 81         &lt;NA&gt;         6.3       1.3          NA 17.70 0.01750    2.000
+## 82         &lt;NA&gt;        12.5        NA          NA 11.50 0.04450    3.380
+## 83         &lt;NA&gt;         9.8       2.4   0.3500000 14.20 0.05040    4.230</code></pre>
 <ol start="3" style="list-style-type: decimal">
-<li>Explore the data. Show the dimensions, column names, classes for each variable, and a statistical summary. Keep these as separate code chunks.</li>
+<li>Show a list of the column names is this data frame.</li>
 </ol>
-<p>Dimensions:</p>
-<pre class="r"><code>dim(homerange)</code></pre>
-<pre><code>## [1] 569  24</code></pre>
-<p>Column names:</p>
-<pre class="r"><code>names(homerange)</code></pre>
-<pre><code>##  [1] &quot;taxon&quot;                      &quot;common.name&quot;               
-##  [3] &quot;class&quot;                      &quot;order&quot;                     
-##  [5] &quot;family&quot;                     &quot;genus&quot;                     
-##  [7] &quot;species&quot;                    &quot;primarymethod&quot;             
-##  [9] &quot;N&quot;                          &quot;mean.mass.g&quot;               
-## [11] &quot;log10.mass&quot;                 &quot;alternative.mass.reference&quot;
-## [13] &quot;mean.hra.m2&quot;                &quot;log10.hra&quot;                 
-## [15] &quot;hra.reference&quot;              &quot;realm&quot;                     
-## [17] &quot;thermoregulation&quot;           &quot;locomotion&quot;                
-## [19] &quot;trophic.guild&quot;              &quot;dimension&quot;                 
-## [21] &quot;preymass&quot;                   &quot;log10.preymass&quot;            
-## [23] &quot;PPMR&quot;                       &quot;prey.size.reference&quot;</code></pre>
-<p>Classes:</p>
-<pre class="r"><code>lapply(homerange, class)</code></pre>
-<pre><code>## $taxon
-## [1] &quot;character&quot;
-## 
-## $common.name
-## [1] &quot;character&quot;
-## 
-## $class
-## [1] &quot;character&quot;
-## 
-## $order
-## [1] &quot;character&quot;
-## 
-## $family
-## [1] &quot;character&quot;
-## 
-## $genus
-## [1] &quot;character&quot;
-## 
-## $species
-## [1] &quot;character&quot;
-## 
-## $primarymethod
-## [1] &quot;character&quot;
-## 
-## $N
-## [1] &quot;character&quot;
-## 
-## $mean.mass.g
-## [1] &quot;numeric&quot;
-## 
-## $log10.mass
-## [1] &quot;numeric&quot;
-## 
-## $alternative.mass.reference
-## [1] &quot;character&quot;
-## 
-## $mean.hra.m2
-## [1] &quot;numeric&quot;
-## 
-## $log10.hra
-## [1] &quot;numeric&quot;
-## 
-## $hra.reference
-## [1] &quot;character&quot;
-## 
-## $realm
-## [1] &quot;character&quot;
-## 
-## $thermoregulation
-## [1] &quot;character&quot;
-## 
-## $locomotion
-## [1] &quot;character&quot;
-## 
-## $trophic.guild
-## [1] &quot;character&quot;
-## 
-## $dimension
-## [1] &quot;character&quot;
-## 
-## $preymass
-## [1] &quot;numeric&quot;
-## 
-## $log10.preymass
-## [1] &quot;numeric&quot;
-## 
-## $PPMR
-## [1] &quot;numeric&quot;
-## 
-## $prey.size.reference
-## [1] &quot;character&quot;</code></pre>
-<p>Summary:</p>
-<pre class="r"><code>summary(homerange)</code></pre>
-<pre><code>##     taxon           common.name           class              order          
-##  Length:569         Length:569         Length:569         Length:569        
-##  Class :character   Class :character   Class :character   Class :character  
-##  Mode  :character   Mode  :character   Mode  :character   Mode  :character  
-##                                                                             
-##                                                                             
-##                                                                             
-##                                                                             
-##     family             genus             species          primarymethod     
-##  Length:569         Length:569         Length:569         Length:569        
-##  Class :character   Class :character   Class :character   Class :character  
-##  Mode  :character   Mode  :character   Mode  :character   Mode  :character  
-##                                                                             
-##                                                                             
-##                                                                             
-##                                                                             
-##       N              mean.mass.g        log10.mass     
-##  Length:569         Min.   :      0   Min.   :-0.6576  
-##  Class :character   1st Qu.:     50   1st Qu.: 1.6990  
-##  Mode  :character   Median :    330   Median : 2.5185  
-##                     Mean   :  34602   Mean   : 2.5947  
-##                     3rd Qu.:   2150   3rd Qu.: 3.3324  
-##                     Max.   :4000000   Max.   : 6.6021  
-##                                                        
-##  alternative.mass.reference  mean.hra.m2          log10.hra     
-##  Length:569                 Min.   :0.000e+00   Min.   :-1.523  
-##  Class :character           1st Qu.:4.500e+03   1st Qu.: 3.653  
-##  Mode  :character           Median :3.934e+04   Median : 4.595  
-##                             Mean   :2.146e+07   Mean   : 4.709  
-##                             3rd Qu.:1.038e+06   3rd Qu.: 6.016  
-##                             Max.   :3.551e+09   Max.   : 9.550  
-##                                                                 
-##  hra.reference         realm           thermoregulation    locomotion       
-##  Length:569         Length:569         Length:569         Length:569        
-##  Class :character   Class :character   Class :character   Class :character  
-##  Mode  :character   Mode  :character   Mode  :character   Mode  :character  
-##                                                                             
-##                                                                             
-##                                                                             
-##                                                                             
-##  trophic.guild       dimension            preymass         log10.preymass   
-##  Length:569         Length:569         Min.   :     0.67   Min.   :-0.1739  
-##  Class :character   Class :character   1st Qu.:    20.02   1st Qu.: 1.3014  
-##  Mode  :character   Mode  :character   Median :    53.75   Median : 1.7304  
-##                                        Mean   :  3989.88   Mean   : 2.0188  
-##                                        3rd Qu.:   363.35   3rd Qu.: 2.5603  
-##                                        Max.   :130233.20   Max.   : 5.1147  
-##                                        NA&#39;s   :502         NA&#39;s   :502      
-##       PPMR         prey.size.reference
-##  Min.   :  0.380   Length:569         
-##  1st Qu.:  3.315   Class :character   
-##  Median :  7.190   Mode  :character   
-##  Mean   : 31.752                      
-##  3rd Qu.: 15.966                      
-##  Max.   :530.000                      
-##  NA&#39;s   :502</code></pre>
+<pre class="r"><code>colnames(sleep)</code></pre>
+<pre><code>##  [1] &quot;name&quot;         &quot;genus&quot;        &quot;vore&quot;         &quot;order&quot;        &quot;conservation&quot;
+##  [6] &quot;sleep_total&quot;  &quot;sleep_rem&quot;    &quot;sleep_cycle&quot;  &quot;awake&quot;        &quot;brainwt&quot;     
+## [11] &quot;bodywt&quot;</code></pre>
 <ol start="4" style="list-style-type: decimal">
-<li>Are there NA’s in your data? Show the code that you would use to verify this, please.<br />
-There are NA’s</li>
+<li>Use <code>glimpse()</code> to summarize the data in <code>sleep</code>.</li>
 </ol>
-<pre class="r"><code>anyNA(homerange)</code></pre>
-<pre><code>## [1] TRUE</code></pre>
+<pre class="r"><code>glimpse(sleep)</code></pre>
+<pre><code>## Observations: 83
+## Variables: 11
+## $ name         &lt;chr&gt; &quot;Cheetah&quot;, &quot;Owl monkey&quot;, &quot;Mountain beaver&quot;, &quot;Greater s...
+## $ genus        &lt;chr&gt; &quot;Acinonyx&quot;, &quot;Aotus&quot;, &quot;Aplodontia&quot;, &quot;Blarina&quot;, &quot;Bos&quot;, &quot;...
+## $ vore         &lt;chr&gt; &quot;carni&quot;, &quot;omni&quot;, &quot;herbi&quot;, &quot;omni&quot;, &quot;herbi&quot;, &quot;herbi&quot;, &quot;c...
+## $ order        &lt;chr&gt; &quot;Carnivora&quot;, &quot;Primates&quot;, &quot;Rodentia&quot;, &quot;Soricomorpha&quot;, &quot;...
+## $ conservation &lt;chr&gt; &quot;lc&quot;, NA, &quot;nt&quot;, &quot;lc&quot;, &quot;domesticated&quot;, NA, &quot;vu&quot;, NA, &quot;d...
+## $ sleep_total  &lt;dbl&gt; 12.1, 17.0, 14.4, 14.9, 4.0, 14.4, 8.7, 7.0, 10.1, 3.0...
+## $ sleep_rem    &lt;dbl&gt; NA, 1.8, 2.4, 2.3, 0.7, 2.2, 1.4, NA, 2.9, NA, 0.6, 0....
+## $ sleep_cycle  &lt;dbl&gt; NA, NA, NA, 0.1333333, 0.6666667, 0.7666667, 0.3833333...
+## $ awake        &lt;dbl&gt; 11.9, 7.0, 9.6, 9.1, 20.0, 9.6, 15.3, 17.0, 13.9, 21.0...
+## $ brainwt      &lt;dbl&gt; NA, 0.01550, NA, 0.00029, 0.42300, NA, NA, NA, 0.07000...
+## $ bodywt       &lt;dbl&gt; 50.000, 0.480, 1.350, 0.019, 600.000, 3.850, 20.490, 0...</code></pre>
 <ol start="5" style="list-style-type: decimal">
-<li>Change the class of the variables <code>taxon</code> and <code>order</code> to factors and display their levels.</li>
+<li>Use <code>summary()</code> to summarize the data in <code>sleep</code>.</li>
 </ol>
-<pre class="r"><code>homerange$taxon &lt;- as.factor(homerange$taxon)
-class(homerange$taxon)</code></pre>
-<pre><code>## [1] &quot;factor&quot;</code></pre>
-<pre class="r"><code>homerange$order &lt;- as.factor(homerange$order)
-class(homerange$order)</code></pre>
-<pre><code>## [1] &quot;factor&quot;</code></pre>
-<pre class="r"><code>levels(homerange$order)</code></pre>
-<pre><code>##  [1] &quot;accipitriformes&quot;    &quot;afrosoricida&quot;       &quot;anguilliformes&quot;    
-##  [4] &quot;anseriformes&quot;       &quot;apterygiformes&quot;     &quot;artiodactyla&quot;      
-##  [7] &quot;caprimulgiformes&quot;   &quot;carnivora&quot;          &quot;charadriiformes&quot;   
-## [10] &quot;columbidormes&quot;      &quot;columbiformes&quot;      &quot;coraciiformes&quot;     
-## [13] &quot;cuculiformes&quot;       &quot;cypriniformes&quot;      &quot;dasyuromorpha&quot;     
-## [16] &quot;dasyuromorpia&quot;      &quot;didelphimorphia&quot;    &quot;diprodontia&quot;       
-## [19] &quot;diprotodontia&quot;      &quot;erinaceomorpha&quot;     &quot;esociformes&quot;       
-## [22] &quot;falconiformes&quot;      &quot;gadiformes&quot;         &quot;galliformes&quot;       
-## [25] &quot;gruiformes&quot;         &quot;lagomorpha&quot;         &quot;macroscelidea&quot;     
-## [28] &quot;monotrematae&quot;       &quot;passeriformes&quot;      &quot;pelecaniformes&quot;    
-## [31] &quot;peramelemorphia&quot;    &quot;perciformes&quot;        &quot;perissodactyla&quot;    
-## [34] &quot;piciformes&quot;         &quot;pilosa&quot;             &quot;proboscidea&quot;       
-## [37] &quot;psittaciformes&quot;     &quot;rheiformes&quot;         &quot;roden&quot;             
-## [40] &quot;rodentia&quot;           &quot;salmoniformes&quot;      &quot;scorpaeniformes&quot;   
-## [43] &quot;siluriformes&quot;       &quot;soricomorpha&quot;       &quot;squamata&quot;          
-## [46] &quot;strigiformes&quot;       &quot;struthioniformes&quot;   &quot;syngnathiformes&quot;   
-## [49] &quot;testudines&quot;         &quot;tetraodontiformes&lt;U+00A0&gt;&quot; &quot;tinamiformes&quot;</code></pre>
-<pre class="r"><code>levels(homerange$taxon)</code></pre>
-<pre><code>## [1] &quot;birds&quot;         &quot;lake fishes&quot;   &quot;lizards&quot;       &quot;mammals&quot;      
-## [5] &quot;marine fishes&quot; &quot;river fishes&quot;  &quot;snakes&quot;        &quot;tortoises&quot;    
-## [9] &quot;turtles&quot;</code></pre>
+<pre class="r"><code>summary(sleep)</code></pre>
+<pre><code>##      name              genus               vore              order          
+##  Length:83          Length:83          Length:83          Length:83         
+##  Class :character   Class :character   Class :character   Class :character  
+##  Mode  :character   Mode  :character   Mode  :character   Mode  :character  
+##                                                                             
+##                                                                             
+##                                                                             
+##                                                                             
+##  conservation        sleep_total      sleep_rem      sleep_cycle    
+##  Length:83          Min.   : 1.90   Min.   :0.100   Min.   :0.1167  
+##  Class :character   1st Qu.: 7.85   1st Qu.:0.900   1st Qu.:0.1833  
+##  Mode  :character   Median :10.10   Median :1.500   Median :0.3333  
+##                     Mean   :10.43   Mean   :1.875   Mean   :0.4396  
+##                     3rd Qu.:13.75   3rd Qu.:2.400   3rd Qu.:0.5792  
+##                     Max.   :19.90   Max.   :6.600   Max.   :1.5000  
+##                                     NA&#39;s   :22      NA&#39;s   :51      
+##      awake          brainwt            bodywt        
+##  Min.   : 4.10   Min.   :0.00014   Min.   :   0.005  
+##  1st Qu.:10.25   1st Qu.:0.00290   1st Qu.:   0.174  
+##  Median :13.90   Median :0.01240   Median :   1.670  
+##  Mean   :13.57   Mean   :0.28158   Mean   : 166.136  
+##  3rd Qu.:16.15   3rd Qu.:0.12550   3rd Qu.:  41.750  
+##  Max.   :22.10   Max.   :5.71200   Max.   :6654.000  
+##                  NA&#39;s   :27</code></pre>
 <ol start="6" style="list-style-type: decimal">
-<li>Make a new dataframe <code>deer</code> that is limited to the mean mass, log10 mass, family, genus, and species of deer in the database. The family for deer is cervidae. Arrange the data in descending order by log10 mass. Which is the largest deer?</li>
+<li>Print out the first column of the data frame and then print out the first row.</li>
 </ol>
-<pre class="r"><code>deer &lt;- homerange %&gt;% 
-  select(family, genus, species, mean.mass.g, log10.mass) %&gt;%
-  filter(family == &quot;cervidae&quot;) %&gt;%
-  arrange(desc(log10.mass))
-
-deer</code></pre>
-<pre><code>## # A tibble: 12 x 5
-##    family   genus      species     mean.mass.g log10.mass
-##    &lt;chr&gt;    &lt;chr&gt;      &lt;chr&gt;             &lt;dbl&gt;      &lt;dbl&gt;
-##  1 cervidae alces      alces           307227.       5.49
-##  2 cervidae cervus     elaphus         234758.       5.37
-##  3 cervidae rangifer   tarandus        102059.       5.01
-##  4 cervidae odocoileus virginianus      87884.       4.94
-##  5 cervidae dama       dama             71450.       4.85
-##  6 cervidae axis       axis             62823.       4.80
-##  7 cervidae odocoileus hemionus         53864.       4.73
-##  8 cervidae ozotoceros bezoarticus      35000.       4.54
-##  9 cervidae cervus     nippon           29450.       4.47
-## 10 cervidae capreolus  capreolus        24050.       4.38
-## 11 cervidae muntiacus  reevesi          13500.       4.13
-## 12 cervidae pudu       puda              7500.       3.88</code></pre>
-<p>The largest deer is the species Alces from the genus alces.</p>
+<p>First Row:</p>
+<pre class="r"><code>sleep[1,]</code></pre>
+<pre><code>##      name    genus  vore     order conservation sleep_total sleep_rem
+## 1 Cheetah Acinonyx carni Carnivora           lc        12.1        NA
+##   sleep_cycle awake brainwt bodywt
+## 1          NA  11.9      NA     50</code></pre>
+<p>First Column:</p>
+<pre class="r"><code>sleep[ ,1]</code></pre>
+<pre><code>##  [1] &quot;Cheetah&quot;                        &quot;Owl monkey&quot;                    
+##  [3] &quot;Mountain beaver&quot;                &quot;Greater short-tailed shrew&quot;    
+##  [5] &quot;Cow&quot;                            &quot;Three-toed sloth&quot;              
+##  [7] &quot;Northern fur seal&quot;              &quot;Vesper mouse&quot;                  
+##  [9] &quot;Dog&quot;                            &quot;Roe deer&quot;                      
+## [11] &quot;Goat&quot;                           &quot;Guinea pig&quot;                    
+## [13] &quot;Grivet&quot;                         &quot;Chinchilla&quot;                    
+## [15] &quot;Star-nosed mole&quot;                &quot;African giant pouched rat&quot;     
+## [17] &quot;Lesser short-tailed shrew&quot;      &quot;Long-nosed armadillo&quot;          
+## [19] &quot;Tree hyrax&quot;                     &quot;North American Opossum&quot;        
+## [21] &quot;Asian elephant&quot;                 &quot;Big brown bat&quot;                 
+## [23] &quot;Horse&quot;                          &quot;Donkey&quot;                        
+## [25] &quot;European hedgehog&quot;              &quot;Patas monkey&quot;                  
+## [27] &quot;Western american chipmunk&quot;      &quot;Domestic cat&quot;                  
+## [29] &quot;Galago&quot;                         &quot;Giraffe&quot;                       
+## [31] &quot;Pilot whale&quot;                    &quot;Gray seal&quot;                     
+## [33] &quot;Gray hyrax&quot;                     &quot;Human&quot;                         
+## [35] &quot;Mongoose lemur&quot;                 &quot;African elephant&quot;              
+## [37] &quot;Thick-tailed opposum&quot;           &quot;Macaque&quot;                       
+## [39] &quot;Mongolian gerbil&quot;               &quot;Golden hamster&quot;                
+## [41] &quot;Vole &quot;                          &quot;House mouse&quot;                   
+## [43] &quot;Little brown bat&quot;               &quot;Round-tailed muskrat&quot;          
+## [45] &quot;Slow loris&quot;                     &quot;Degu&quot;                          
+## [47] &quot;Northern grasshopper mouse&quot;     &quot;Rabbit&quot;                        
+## [49] &quot;Sheep&quot;                          &quot;Chimpanzee&quot;                    
+## [51] &quot;Tiger&quot;                          &quot;Jaguar&quot;                        
+## [53] &quot;Lion&quot;                           &quot;Baboon&quot;                        
+## [55] &quot;Desert hedgehog&quot;                &quot;Potto&quot;                         
+## [57] &quot;Deer mouse&quot;                     &quot;Phalanger&quot;                     
+## [59] &quot;Caspian seal&quot;                   &quot;Common porpoise&quot;               
+## [61] &quot;Potoroo&quot;                        &quot;Giant armadillo&quot;               
+## [63] &quot;Rock hyrax&quot;                     &quot;Laboratory rat&quot;                
+## [65] &quot;African striped mouse&quot;          &quot;Squirrel monkey&quot;               
+## [67] &quot;Eastern american mole&quot;          &quot;Cotton rat&quot;                    
+## [69] &quot;Mole rat&quot;                       &quot;Arctic ground squirrel&quot;        
+## [71] &quot;Thirteen-lined ground squirrel&quot; &quot;Golden-mantled ground squirrel&quot;
+## [73] &quot;Musk shrew&quot;                     &quot;Pig&quot;                           
+## [75] &quot;Short-nosed echidna&quot;            &quot;Eastern american chipmunk&quot;     
+## [77] &quot;Brazilian tapir&quot;                &quot;Tenrec&quot;                        
+## [79] &quot;Tree shrew&quot;                     &quot;Bottle-nosed dolphin&quot;          
+## [81] &quot;Genet&quot;                          &quot;Arctic fox&quot;                    
+## [83] &quot;Red fox&quot;</code></pre>
 <ol start="7" style="list-style-type: decimal">
-<li>As measured by the data, which snake species has the smallest homerange? Show all of your work, please. Look this species up online and tell me about it!</li>
+<li>We are interested in two groups; small and large mammals. Let’s define small as less than or equal to 1kg body weight and large as greater than or equal to 200kg body weight. Make two new dataframes (large and small) based on these parameters.</li>
 </ol>
-<pre class="r"><code>snake &lt;- homerange %&gt;% 
-  select(taxon, family, species, common.name, mean.hra.m2) %&gt;% 
-  filter(taxon==&quot;snakes&quot;) %&gt;% 
-  arrange(mean.hra.m2)
-snake</code></pre>
-<pre><code>## # A tibble: 41 x 5
-##    taxon  family     species      common.name          mean.hra.m2
-##    &lt;fct&gt;  &lt;chr&gt;      &lt;chr&gt;        &lt;chr&gt;                      &lt;dbl&gt;
-##  1 snakes viperidae  schneideri   namaqua dwarf adder         200 
-##  2 snakes colubridae viridis      eastern worm snake          253 
-##  3 snakes colubridae butleri      butlers garter snake        600 
-##  4 snakes colubridae vermis       western worm snake          700 
-##  5 snakes viperidae  latastei     snubnosed viper            2400 
-##  6 snakes viperidae  shedaoensis  chinese pit viper          2614.
-##  7 snakes colubridae punctatus    ringneck snake             6476 
-##  8 snakes viperidae  piscivorous  cottonmouth               10655 
-##  9 snakes colubridae rufodorsatus redbacked ratsnake        15400 
-## 10 snakes colubridae catenifer    gopher snake              17400 
-## # ... with 31 more rows</code></pre>
-<p>Namaqua dwarf adder has the smallest homerange. This is the smallest adder in the world, averaging around 20 cm. Females produce 3 – 7 young, each measuring 11 – 13 cm in length. It occurs in coastal dunes in Namaqualand and southern Namibia where it feeds on lizards and Rain frogs.</p>
-<ol start="8" style="list-style-type: decimal">
-<li>You suspect that homerange and mass are correlated in birds. We need a ratio that facilitates exploration of this prediction. First, build a new dataframe called <code>hra_ratio</code> that is limited to genus, species, mean.mass.g, log10.mass, log10.hra. Arrange it in ascending order by mean mass in grams.</li>
-</ol>
-<pre class="r"><code>hra_ratio &lt;- homerange %&gt;% 
-  filter(taxon == &quot;birds&quot;) %&gt;% 
-  select(genus, species, mean.mass.g, log10.mass, log10.hra) %&gt;% 
-  arrange(mean.mass.g)
-hra_ratio</code></pre>
-<pre><code>## # A tibble: 140 x 5
-##    genus        species      mean.mass.g log10.mass log10.hra
-##    &lt;chr&gt;        &lt;chr&gt;              &lt;dbl&gt;      &lt;dbl&gt;     &lt;dbl&gt;
-##  1 regulus      regulus             5.15      0.712      4.30
-##  2 regulus      ignicapillus        5.3       0.724      4.22
-##  3 phylloscopus bonelli             7.5       0.875      4.54
-##  4 aegithalos   caudatus            8         0.903      4.62
-##  5 vireo        atricapillus        8.5       0.929      4.18
-##  6 setophaga    magnolia            8.6       0.934      3.86
-##  7 certhia      familiaris          8.77      0.943      4.67
-##  8 sylvia       undata              8.8       0.944      3.45
-##  9 setophaga    ruticilla           9         0.954      3.29
-## 10 setophaga    virens              9         0.954      3.81
-## # ... with 130 more rows</code></pre>
-<ol start="9" style="list-style-type: decimal">
-<li>Replace the existing <code>hra_ratio</code> dataframe with a new dataframe that adds a column calculating the ratio of log 10 hra to log 10 mass. Call it <code>hra.mass.ratio</code>. Arrange it in descending order by mean mass in grams.</li>
-</ol>
-<pre class="r"><code>hra.ratio.mass &lt;- hra_ratio %&gt;% 
-  mutate(hra.mass.ratio = log10.hra / log10.mass) %&gt;% 
-  arrange(mean.mass.g)
+<pre class="r"><code>smallanimals &lt;- subset(sleep, bodywt&lt;=1)
+small &lt;- data.frame(smallanimals)
 
-hra.ratio.mass</code></pre>
-<pre><code>## # A tibble: 140 x 6
-##    genus        species      mean.mass.g log10.mass log10.hra hra.mass.ratio
-##    &lt;chr&gt;        &lt;chr&gt;              &lt;dbl&gt;      &lt;dbl&gt;     &lt;dbl&gt;          &lt;dbl&gt;
-##  1 regulus      regulus             5.15      0.712      4.30           6.04
-##  2 regulus      ignicapillus        5.3       0.724      4.22           5.82
-##  3 phylloscopus bonelli             7.5       0.875      4.54           5.19
-##  4 aegithalos   caudatus            8         0.903      4.62           5.12
-##  5 vireo        atricapillus        8.5       0.929      4.18           4.49
-##  6 setophaga    magnolia            8.6       0.934      3.86           4.13
-##  7 certhia      familiaris          8.77      0.943      4.67           4.95
-##  8 sylvia       undata              8.8       0.944      3.45           3.65
-##  9 setophaga    ruticilla           9         0.954      3.29           3.45
-## 10 setophaga    virens              9         0.954      3.81           3.99
-## # ... with 130 more rows</code></pre>
+largeanimals &lt;- subset(sleep, bodywt&gt;=200)
+large &lt;- data.frame(smallanimals)</code></pre>
+<ol start="8" style="list-style-type: decimal">
+<li>What is the mean weight for both the large and small mammals? Large:</li>
+</ol>
+<pre class="r"><code>mean(large$bodywt)</code></pre>
+<pre><code>## [1] 0.2596667</code></pre>
+<p>Small:</p>
+<pre class="r"><code>mean(small$bodywt)</code></pre>
+<pre><code>## [1] 0.2596667</code></pre>
+<ol start="9" style="list-style-type: decimal">
+<li>Let’s try to figure out if large mammals sleep, on average, longer than small mammals. What is the average sleep duration for large mammals as we have defined them?</li>
+</ol>
+<pre class="r"><code>mean(large$bodywt)</code></pre>
+<pre><code>## [1] 0.2596667</code></pre>
 <ol start="10" style="list-style-type: decimal">
-<li>What is the lowest mass for birds with a <code>hra.mass.ratio</code> greater than or equal to 4.0?</li>
+<li>What is the average sleep duration for small mammals as we have defined them?</li>
 </ol>
-<pre class="r"><code>hra.ratio.mass %&gt;% 
-  filter(hra.mass.ratio&gt;=4.0) %&gt;% 
-  arrange(mean.mass.g)</code></pre>
-<pre><code>## # A tibble: 17 x 6
-##    genus        species      mean.mass.g log10.mass log10.hra hra.mass.ratio
-##    &lt;chr&gt;        &lt;chr&gt;              &lt;dbl&gt;      &lt;dbl&gt;     &lt;dbl&gt;          &lt;dbl&gt;
-##  1 regulus      regulus             5.15      0.712      4.30           6.04
-##  2 regulus      ignicapillus        5.3       0.724      4.22           5.82
-##  3 phylloscopus bonelli             7.5       0.875      4.54           5.19
-##  4 aegithalos   caudatus            8         0.903      4.62           5.12
-##  5 vireo        atricapillus        8.5       0.929      4.18           4.49
-##  6 setophaga    magnolia            8.6       0.934      3.86           4.13
-##  7 certhia      familiaris          8.77      0.943      4.67           4.95
-##  8 wilsonia     canadensis          9.3       0.968      4.01           4.14
-##  9 troglodytes  troglodytes         9.5       0.978      4.01           4.10
-## 10 cisticola    juncidis            9.8       0.991      4.16           4.20
-## 11 vireo        belli              10         1          4.07           4.07
-## 12 parus        carolinensis       10.1       1.00       4.18           4.16
-## 13 hippolais    polyglotta         11         1.04       4.48           4.30
-## 14 parus        palustris          11         1.04       4.36           4.18
-## 15 spizella     passerina          12.2       1.09       4.49           4.13
-## 16 contopus     virens             13.8       1.14       4.64           4.07
-## 17 motacilla    alba               21.2       1.33       5.89           4.44</code></pre>
-<p>the lowest mass for birds is with a <code>hra.mass.ratio</code> greater than or equal to 4.0 is 5.15g</p>
+<pre class="r"><code>mean(small$sleep_total)</code></pre>
+<pre><code>## [1] 12.65833</code></pre>
 <ol start="11" style="list-style-type: decimal">
-<li>Do a search online; what is the common name of the bird from #8 above? Place a link in your markdown file that takes us to a webpage with information on its biology.</li>
+<li>Which animals are the sleepiest? Which sleep least 18 hours per day?</li>
 </ol>
-<p>The common name for Wilsonia canadensis is Canada Warbler</p>
-<ol start="12" style="list-style-type: decimal">
-<li>What is the <code>hra.mass.ratio</code> for an ostrich? Show your work, please.</li>
-</ol>
-<pre class="r"><code>homerange %&gt;% 
-  filter(common.name == &quot;ostrich&quot;) %&gt;% 
-  select(species)</code></pre>
-<pre><code>## # A tibble: 1 x 1
-##   species
-##   &lt;chr&gt;  
-## 1 camelus</code></pre>
-<pre class="r"><code>hra.ratio.mass %&gt;% 
-  filter(species == &quot;camelus&quot;)</code></pre>
-<pre><code>## # A tibble: 1 x 6
-##   genus    species mean.mass.g log10.mass log10.hra hra.mass.ratio
-##   &lt;chr&gt;    &lt;chr&gt;         &lt;dbl&gt;      &lt;dbl&gt;     &lt;dbl&gt;          &lt;dbl&gt;
-## 1 struthio camelus       88250       4.95      7.93           1.60</code></pre>
-<p>The hra.mass.ratio for an ostrich is 1.602565. ## Push your final code to GitHub! Please be sure that you have check the <code>keep md</code> file in the knit preferences.</p>
+<pre class="r"><code>Large_sleep_total &lt;- mean(large$sleep_total)
+small_sleep_total &lt;- mean(large$sleep_total)
+
+if (Large_sleep_total&gt;small_sleep_total)
+  print(&quot;Large animals are the sleepiest&quot;)
+if(small_sleep_total&gt;Large_sleep_total)
+  print(&quot;small animals are the sleepiest&quot;)</code></pre>
+</div>
+<div id="push-your-final-code-to-github" class="section level2">
+<h2>Push your final code to GitHub</h2>
 </div>
 
 
