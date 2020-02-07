@@ -1,4 +1,3 @@
----
 title: "Tidyr 1: Tidy data and `pivot_long()`"
 output:
   html_document:
