@@ -45,7 +45,7 @@ life_history
 ```
 
 2. What are the possible problems if missing data are indicated by "-999.0" or "0"?
-
+It will be treated as an actual value
 
 ## For the following examples, we will use the built-in `msleep` data
 ```{r}
@@ -80,12 +80,25 @@ summary(msleep)
 
 ## Practice
 1. Load the data `import_export.csv` and store it as a new object `import_export`.
+```{r}
+import_export <- readr::read_csv("data/import_export.csv")
+import_export
+```
 
 
 2. Are there NAs in the data? Evaluate this logically (true/false).
+True
+
+```{r}
+is.na(import_export)
+```
 
 
 3. How many total NAs are present?
+```{r}
+import_export %>% 
+  summarise(total_nas=sum(is.na(import_export)))
+```
 
 
 ## NAs in large datasets using `purr`
@@ -97,7 +110,7 @@ msleep %>%
   purrr::map_df(~ sum(is.na(.))) #map to a new data frame the sum results of the is.na function for all columns
 ```
 
-Don't forget that we can use `gather()` to make viewing this output easier.
+Don't forget that we can use `pivot_longer()` to make viewing this output easier.
 ```{r}
 msleep %>% 
   purrr::map_df(~ sum(is.na(.))) %>% 
@@ -169,9 +182,18 @@ life_history %>%
 life_history2 <- 
   life_history %>% 
   na_if("-999")
+
 ```
 
 4. In which variable are the most NAs in the data frame?
+```{r}
+life_history2 %>% 
+  purrr::map_df(~ sum(is.na(.))) %>% 
+  pivot_longer(everything(),
+    names_to= "variables",
+    values_to = "num_nas") %>% 
+  arrange(desc(num_nas))
+```
 
 
 ## `naniar`
@@ -205,7 +227,7 @@ life_history %>%
 ## Visualizing NAs
 There is another package `visdat` that can be used to visualize the proportion of different classes of data, including missing data.
 ```{r}
-#install.packages("vidat)
+#install.packages("visdat")
 library(visdat)
 ```
 
