@@ -54,6 +54,7 @@ names(homerange)
 Classes:
 ```{r}
 lapply(homerange, class)
+#lapply is fine, you can also use glimpse()
 ```
 
 
@@ -72,7 +73,9 @@ anyNA(homerange)
 ```
 
 
-5. Change the class of the variables `taxon` and `order` to factors and display their levels.  
+5. Change the class of the variables `taxon` and `order` to factors and display their levels. 
+
+##Love how separated and tidy this is!
 ```{r}
 homerange$taxon <- as.factor(homerange$taxon)
 class(homerange$taxon)
@@ -148,7 +151,12 @@ hra.ratio.mass %>%
 
 the lowest mass for birds is with a `hra.mass.ratio` greater than or equal to 4.0 is 5.15g
 
-11. Do a search online; what is the common name of the bird from #8 above? Place a link in your markdown file that takes us to a webpage with information on its biology.  
+11. Do a search online; what is the common name of the bird from #8 above? Place a link in your markdown file that takes us to a webpage with information on its biology. 
+
+##This question was a little unclear, it means the answer from the question (# 10) which is Regulus regulus, the Gold Crest. It also asks you to add a link to the markdown:
+
+[Gold Crest](https://en.wikipedia.org/wiki/Goldcrest)
+
 
 The common name for Wilsonia canadensis is Canada Warbler
 
