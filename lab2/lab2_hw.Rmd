@@ -72,11 +72,12 @@ sleep[ ,1]
 
 7. We are interested in two groups; small and large mammals. Let's define small as less than or equal to 1kg body weight and large as greater than or equal to 200kg body weight. Make two new dataframes (large and small) based on these parameters.  
 ```{r}
-smallanimals <- subset(sleep, bodywt<=1)
-small <- data.frame(smallanimals)
+#the second lines aren't necessary, we've already made a dataframe, but we'll keep the small and large names to use for the rest of the code
+small <- subset(sleep, bodywt<=1)
+#small <- data.frame(smallanimals)
 
-largeanimals <- subset(sleep, bodywt>=200)
-large <- data.frame(smallanimals)
+large <- subset(sleep, bodywt>=200)
+#large <- data.frame(smallanimals)
 ```
 
 
@@ -111,7 +112,7 @@ mean(small$sleep_total)
 11. Which animals are the sleepiest? Which sleep least 18 hours per day?  
 ```{r}
 Large_sleep_total <- mean(large$sleep_total)
-small_sleep_total <- mean(large$sleep_total)
+small_sleep_total <- mean(small$sleep_total)
 
 if (Large_sleep_total>small_sleep_total)
   print("Large animals are the sleepiest")
