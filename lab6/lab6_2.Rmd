@@ -103,6 +103,17 @@ homerange %>%
 
 ## Practice
 1. Make a barplot that shows locomotion type by `primarymethod`. Try both a stacked barplot and `position="dodge"`.
+```{r}
+homerange %>% 
+  group_by(locomotion) %>% 
+  ggplot(aes(x = locomotion, group = primarymethod, fill = primarymethod))+
+  geom_bar(position = "dodge")
+
+
+  
+  
+```
+
 
 
 ## Histograms and Density Plots
@@ -135,12 +146,31 @@ homerange %>%
 
 ## Practice
 1. Make a histogram of `log10.hra`. Make sure to add a title.
+```{r}
+homerange %>% 
+  ggplot(aes(x = log10.hra)) +
+  geom_histogram(alpha = 0.6, color = "black")+
+  labs(title = "Distribution of Body Mass")
+```
 
 
 2. Now plot the same variable using `geom_density()`.
+```{r}
+homerange %>% 
+  ggplot(aes(x = log10.mass)) +
+  geom_density(alpha = 0.6, color = "black", fill = "orange")+
+  labs(title = "Distribution of Body Mass")
+```
 
 
 3. Combine them both!
+```{r}
+homerange %>% 
+  ggplot(aes(x=log10.hra)) +
+  geom_histogram(aes(y = ..density..), binwidth = .4, fill = "black", alpha = 0.8, color = "green")+
+  geom_density(color = "purple")+
+  labs(title = "Distribution of Body Mass")
+```
 
 
 ## Create Categories with mutate and case_when()
@@ -165,11 +195,37 @@ homerange %>%
 
 ## Practice
 1. Use case_when() to make a new column `range_category` that breaks down `log10.hra` into very small, small, medium, and large classes based on quartile.
+```{r}
+summary(homerange$log10.hra)
+```
+
+
+```{r}
+homerange <- homerange %>% 
+             mutate(range_category = case_when(log10.hra <= 3.653 ~ "very small",
+                                               log10.hra > 3.653 & log10.hra <= 4.595 ~ "small",
+                                              log10.hra > 4.595 & log10.mass <= 6.016 ~ "medium",
+                                              log10.hra > 6.016 ~ "large"))
+homerange
+```
+
+
 
 2. How many and which taxonomic classes are represented in each of the `range_category` classes?
+```{r}
+
+```
+
 
 
 3. Isolate the small `range_category` and plot the range of `log10.mass` by taxonomic class.
+```{r}
+homerange %>% 
+  ggplot(aes(x = range_category, y = log10.mass, group = taxon))+
+  geom_boxplot()
+  
+```
+
 
 ## Faceting: `facet_wrap()`
 Faceting is one of the most amazing features of ggplot. It allows you to make multi-panel plots for easy comparison. Here, I am making histograms of log10.mass for every taxon. We read the `~` in the `facet_wrap()` layer as `by`.
