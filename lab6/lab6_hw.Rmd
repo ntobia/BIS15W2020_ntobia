@@ -42,7 +42,7 @@ anyNA(gapminder)
 
 **2. Among the interesting variables in gapminder is life expectancy. How has global life expectancy changed between 1952 and 2007?**
 The global life expectancy has increased between 1952 and 2007
-
+##Remember, it's always nice to make a data table to go along with plots
 ```{r}
 global_life_exp <- gapminder %>% 
   select(country, year, lifeExp) %>% 
@@ -58,10 +58,10 @@ global_life_exp <- gapminder %>%
 
 global_life_exp
 ```
-
+##A bar plot works, but the relationship might be shown more clearly using a line graph.
 
 **3. How do the distributions of life expectancy compare for the years 1952 and 2007? _Challenge: Can you put both distributions on a single plot?_**
-
+##Another option would be to using a density plot - geom_density()
 ```{r}
 gapminder %>% 
   group_by(year) %>% 
@@ -76,6 +76,7 @@ gapminder %>%
 
 
 **4. Your answer above doesn't tell the whole story since life expectancy varies by region. Make a summary that shows the min, mean, and max life expectancy by continent for all years represented in the data.**
+##Make sure your code generates the summary you create
 ```{r}
 lifeExp_region <- gapminder %>% 
   select(continent, country,year,lifeExp) %>% 
@@ -83,6 +84,7 @@ lifeExp_region <- gapminder %>%
   summarise(lifeExp_min = min(lifeExp),
             lifeExp_mean = mean(lifeExp),
             lifeExp_max = max(lifeExp))
+lifeExp_region
 ```
 
 ```{r}
@@ -97,6 +99,7 @@ gapminder %>%
 
 
 **5. How has life expectancy changed between 1952-2007 for each continent? Try using `geom_line()` for this, including all continents on the same  plot.**
+##Love the attention to detail on the axes.
 ```{r}
 lifeExp_region %>% 
   ggplot(aes(x = year, y = lifeExp_mean, color = continent))+
@@ -111,6 +114,7 @@ lifeExp_region %>%
 ```
 
 **6. We are interested in the relationship between per capita GDP and life expectancy; i.e. does having more money help you live longer?**
+##I like giving the continents seperate colors
 ```{r}
 gapminder %>% 
   select(country, continent, year, lifeExp, gdpPercap) %>%
@@ -125,6 +129,8 @@ gapminder %>%
 
 
 **7. There is extreme disparity in per capita GDP. Rescale the x axis to make this easier to interpret. How would you characterize the relationship?**
+##you can also use geom_smooth() to add a regression line and make the relationship that much more obvious.
+##Note you've ased R to color by continent on a plot of countries, this is why you're getting a warning in the markdown.
 ```{r}
 gapminder %>% 
   select(country, continent, year, lifeExp, gdpPercap,) %>%
@@ -134,7 +140,6 @@ gapminder %>%
     x= "log(GDP Per Capita)",
     y= "Life Expectancy (years)")+
   scale_x_log10()
-
 ```
 
 
