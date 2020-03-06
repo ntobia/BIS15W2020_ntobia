@@ -1,0 +1,89 @@
+---
+title: "Project"
+author: "Nick Tobia"
+date: "2/21/2020"
+output: html_document
+---
+
+```{r}
+library("tidyverse")
+```
+
+```{r}
+getwd()
+```
+
+
+```{r}
+```
+
+
+```{r}
+Data <- readr::read_csv("C:/Users/Owner/Desktop/BIS15W2020_ntobia/Project/Copy.csv")
+```
+
+```{r}
+glimpse(Data)
+```
+
+```{r}
+
+```
+
+
+```{r}
+row.names(Data)
+```
+
+```{r}
+summary(Data)
+```
+
+
+```{r}
+anyNA(Data)
+```
+
+```{r}
+Data2 <- Data %>% 
+  rename(Activity_Reduction="Cut down on the amount of time you spent on work or other activities?", Less_Accomplished="Accomplished less than you would like?", Less_Careful_Work= "Did work or other activities less carefully than ususal?", Physical_Emotional_Health_VS_Social= "Has your physical health or emotional problems interfered with your normal social activities?", Health_VS_SocialAct.="Has your health limited your social activities?", Nervousness= "Have you been a very nervous person?", Un_Cheerable="Have you felt so down in the dumps that nothing could cheer you up?", Calm="Have you felt calm and peaceful?",Downhearted="Have you felt downhearted and blue?", Happy="Have you been a happy person?")
+         
+```
+
+```{r}
+Data3 <- Data2 %>% 
+  separate(Activity_Reduction, into= c("Activity Reduction? ", "TotalPop"),  sep = "/")  %>% 
+  separate(Less_Accomplished, into = c("Less Accomplished? ", "TotalPop2"), sep = "/")  %>% 
+  separate(Less_Careful_Work, into = c("Less Careful Work?", "TotalPop3"), sep = "/")  %>%
+  separate(Physical_Emotional_Health_VS_Social, into = c("Phys/Emotional Prob Affectting Social Activity?", "TotalPop4"), sep = "/")    %>% 
+  separate(Health_VS_SocialAct., into = c("Health limits Social Act?", "TotalPop5"), sep = "/")   %>% 
+  separate(Nervousness, into = c("Nervousness?", "TotalPop6"), sep = "/")   %>% 
+  separate(Un_Cheerable, into = c("Uncheerable?", "TotaPop7"), sep = "/")   %>% 
+  separate(Calm, into = c("Calm?", "TotalPop8"),sep = "/")      %>% 
+  separate(Downhearted, into = c("Downhearted?", "TotalPop9"), sep = "/") %>% 
+  separate(Happy, into = c("Happy?", "TotalPop10"), sep = "/")
+Data3
+```
+
+
+```{r}
+Data4 <- Data3   %>% 
+  separate(TotalPop, into = c("TotalPop1", "% Reported"), sep = " ")
+
+Data4
+```
+
+
+```{r}
+Data5 <- Data4 %>% 
+  separate(TotalPop2, into = c("TotalPop2", "% Reported"), sep = " ")
+  
+```
+
+
+
+
+
+
+
+
