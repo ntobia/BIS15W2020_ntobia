@@ -4,6 +4,10 @@ author: "Nick Tobia"
 date: "2/21/2020"
 output: html_document
 ---
+```{r}
+install.packages("editData")
+```
+
 
 ```{r}
 library("tidyverse")
@@ -20,15 +24,13 @@ getwd()
 
 ```{r}
 Data <- readr::read_csv("C:/Users/Owner/Desktop/BIS15W2020_ntobia/Project/Copy.csv")
+Data <- Data[-c(15,25),]
 ```
 
 ```{r}
 glimpse(Data)
 ```
 
-```{r}
-
-```
 
 
 ```{r}
@@ -58,7 +60,7 @@ Data3 <- Data2 %>%
   separate(Physical_Emotional_Health_VS_Social, into = c("Phys/Emotional Prob Affectting Social Activity?", "TotalPop4"), sep = "/")    %>% 
   separate(Health_VS_SocialAct., into = c("Health limits Social Act?", "TotalPop5"), sep = "/")   %>% 
   separate(Nervousness, into = c("Nervousness?", "TotalPop6"), sep = "/")   %>% 
-  separate(Un_Cheerable, into = c("Uncheerable?", "TotaPop7"), sep = "/")   %>% 
+  separate(Un_Cheerable, into = c("Uncheerable?", "TotalPop7"), sep = "/")   %>% 
   separate(Calm, into = c("Calm?", "TotalPop8"),sep = "/")      %>% 
   separate(Downhearted, into = c("Downhearted?", "TotalPop9"), sep = "/") %>% 
   separate(Happy, into = c("Happy?", "TotalPop10"), sep = "/")
@@ -77,10 +79,38 @@ Data4
 ```{r}
 Data5 <- Data4 %>% 
   separate(TotalPop2, into = c("TotalPop2", "% Reported"), sep = " ")
-  
+Data5
 ```
 
 
+```{r}
+Data6 <- Data5 %>% 
+   separate(TotalPop3, into = c("TotalPop3", "% Reported"), sep = " ")
+Data6
+```
+
+
+```{r}
+Data7 <- 
+  Data7 %>%
+  mutate(test=case_when(grepl("(", Totalpop10) ~" "))
+  
+  
+  
+  mutate(Totalpop10 = case_when(.$TotalPop10(contains("("))~" ")
+```
+
+```{r}
+Data7 <- Data6 %>% 
+  separate(TotalPop4, into = c("TotalPop4", "% Reported"), sep = " ") %>% 
+  separate(TotalPop5, into = c("TotalPop5", "% Reported"), sep = " ") %>% 
+  separate(TotalPop6, into = c("TotalPop6", "% Reported"), sep = " ") %>%
+  separate(TotalPop7, into = c("TotalPop7", "% Reported"), sep = " ") %>% 
+  separate(TotalPop8, into = c("TotalPop8", "% Reported"), sep = " ") %>% 
+  separate(TotalPop9, into = c("TotalPop9", "% Reported"), sep = " ") %>% 
+  separate(TotalPop10, into = c("TotalPop10", "% Reported"), sep = " ")
+Data7
+```
 
 
 
