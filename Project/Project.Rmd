@@ -8,7 +8,6 @@ output: html_document
 install.packages("editData")
 ```
 
-
 ```{r}
 library("tidyverse")
 ```
@@ -23,7 +22,7 @@ getwd()
 
 
 ```{r}
-Data <- readr::read_csv("C:/Users/Owner/Desktop/BIS15W2020_ntobia/Project/Copy.csv")
+Data <- readr::read_csv("Copy.csv")
 Data <- Data[-c(15,25),]
 ```
 
@@ -89,17 +88,6 @@ Data6 <- Data5 %>%
 Data6
 ```
 
-
-```{r}
-Data7 <- 
-  Data7 %>%
-  mutate(test=case_when(grepl("(", Totalpop10) ~" "))
-  
-  
-  
-  mutate(Totalpop10 = case_when(.$TotalPop10(contains("("))~" ")
-```
-
 ```{r}
 Data7 <- Data6 %>% 
   separate(TotalPop4, into = c("TotalPop4", "% Reported"), sep = " ") %>% 
@@ -110,6 +98,13 @@ Data7 <- Data6 %>%
   separate(TotalPop9, into = c("TotalPop9", "% Reported"), sep = " ") %>% 
   separate(TotalPop10, into = c("TotalPop10", "% Reported"), sep = " ")
 Data7
+```
+
+```{r}
+Data7 %>% 
+  select(TotalPop10) %>% 
+  filter(TotalPop10!="No.") %>% 
+  separate(TotalPop10, into = c("A","B"), sep = "([\\(])")
 ```
 
 
