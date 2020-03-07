@@ -24,7 +24,7 @@ getwd()
 
 ```{r}
 Data <- readr::read_csv("C:/Users/Owner/Desktop/BIS15W2020_ntobia/Project/Copy.csv")
-Data <- Data[-c(15,25),]
+Data <- Data[-c(1,15,25),]
 ```
 
 ```{r}
@@ -78,7 +78,8 @@ Data4
 
 ```{r}
 Data5 <- Data4 %>% 
-  separate(TotalPop2, into = c("TotalPop2", "% Reported"), sep = " ")
+  separate(TotalPop2, into = c("TotalPop2", "% Reported"), sep = " ") %>% 
+  separate(TotalPop2, into = c("TotalPop2","% Reported"), sep = "([\\(])")
 Data5
 ```
 
@@ -90,15 +91,8 @@ Data6
 ```
 
 
-```{r}
-Data7 <- 
-  Data7 %>%
-  mutate(test=case_when(grepl("(", Totalpop10) ~" "))
-  
-  
-  
-  mutate(Totalpop10 = case_when(.$TotalPop10(contains("("))~" ")
-```
+
+
 
 ```{r}
 Data7 <- Data6 %>% 
@@ -114,6 +108,12 @@ Data7
 
 
 
+```{r}
+Data7 %>% 
+  separate(TotalPop10, into = c("TotalPop10","% Reported"), sep = "([\\(])")
+```
 
-
+```{r}
+Data7
+```
 
