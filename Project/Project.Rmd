@@ -4,9 +4,7 @@ author: "Nick Tobia"
 date: "2/21/2020"
 output: html_document
 ---
-```{r}
-install.packages("editData")
-```
+
 
 ```{r}
 library("tidyverse")
@@ -18,24 +16,15 @@ getwd()
 
 
 ```{r}
-```
 
-
-```{r}
-<<<<<<< HEAD
 Data <- readr::read_csv("C:/Users/Owner/Desktop/BIS15W2020_ntobia/Project/Copy.csv")
 Data <- Data[-c(1,15,25),]
-=======
-Data <- readr::read_csv("Copy.csv")
-Data <- Data[-c(15,25),]
->>>>>>> 5c28921712c95faf8d4ca2132435aaa745a99559
+
 ```
 
 ```{r}
 glimpse(Data)
 ```
-
-
 
 ```{r}
 row.names(Data)
@@ -74,7 +63,8 @@ Data3
 
 ```{r}
 Data4 <- Data3   %>% 
-  separate(TotalPop, into = c("TotalPop1", "% Reported"), sep = " ")
+  separate(TotalPop, into = c("TotalPop1", "% Reported"), sep = " ") %>% 
+   separate(TotalPop1, into = c("TotalPop1","% Reported"), sep = "([\\(])")
 
 Data4
 ```
@@ -90,44 +80,95 @@ Data5
 
 ```{r}
 Data6 <- Data5 %>% 
-   separate(TotalPop3, into = c("TotalPop3", "% Reported"), sep = " ")
+   separate(TotalPop3, into = c("TotalPop3", "% Reported"), sep = " ") %>% 
+   separate(TotalPop3, into = c("TotalPop3","% Reported"), sep = "([\\(])")
 Data6
 ```
 
-<<<<<<< HEAD
 
 
 
 
 =======
->>>>>>> 5c28921712c95faf8d4ca2132435aaa745a99559
+
 ```{r}
 Data7 <- Data6 %>% 
-  separate(TotalPop4, into = c("TotalPop4", "% Reported"), sep = " ") %>% 
+  separate(TotalPop4, into = c("TotalPop4", "% Reported"), sep = " ") %>%
+  separate(TotalPop4, into = c("TotalPop4","% Reported"), sep = "([\\(])") %>% 
   separate(TotalPop5, into = c("TotalPop5", "% Reported"), sep = " ") %>% 
+  separate(TotalPop5, into = c("TotalPop5","% Reported"), sep = "([\\(])") %>% 
   separate(TotalPop6, into = c("TotalPop6", "% Reported"), sep = " ") %>%
+  separate(TotalPop6, into = c("TotalPop6","% Reported"), sep = "([\\(])") %>% 
   separate(TotalPop7, into = c("TotalPop7", "% Reported"), sep = " ") %>% 
-  separate(TotalPop8, into = c("TotalPop8", "% Reported"), sep = " ") %>% 
+  separate(TotalPop7, into = c("TotalPop7","% Reported"), sep = "([\\(])") %>% 
+  separate(TotalPop8, into = c("TotalPop8", "% Reported"), sep = " ") %>%
+  separate(TotalPop8, into = c("TotalPop8","% Reported"), sep = "([\\(])") %>% 
   separate(TotalPop9, into = c("TotalPop9", "% Reported"), sep = " ") %>% 
-  separate(TotalPop10, into = c("TotalPop10", "% Reported"), sep = " ")
-Data7
-```
-
-```{r}
-Data7 %>% 
-  select(TotalPop10) %>% 
-  filter(TotalPop10!="No.") %>% 
-  separate(TotalPop10, into = c("A","B"), sep = "([\\(])")
-```
-
-
-
-```{r}
-Data7 %>% 
+  separate(TotalPop9, into = c("TotalPop9","% Reported"), sep = "([\\(])") %>% 
+  separate(TotalPop10, into = c("TotalPop10", "% Reported"), sep = " ") %>% 
   separate(TotalPop10, into = c("TotalPop10","% Reported"), sep = "([\\(])")
+
+  Data7
+```
+```{r}
+data <- Data7
 ```
 
+
 ```{r}
-Data7
+glimpse(data)
 ```
+
+
+
+
+
+```{r}
+
+  
+
+data%>%
+pivot_longer('Nervousness?': 'Happy?',
+             names_to = "Emotional_state",
+             values_to = "Count") %>%
+  group_by(Emotional_state) %>% 
+  summarise('Male') %>% 
+  ggplot(aes(x = Emotional_state, y = "Male"))+
+  geom_bar(stat = "identity")
+  
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
